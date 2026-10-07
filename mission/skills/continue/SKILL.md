@@ -10,33 +10,25 @@ effort: high
 
 # Mission Continue — Forced Reorientation
 
-> Context refresh is not a limitation — it's Boyd's reorientation in action.
-
-You are resuming a mission with **fresh context**. This is the most powerful moment in the OODA cycle: your old context, with its accumulated drift, stale assumptions, and lost-in-the-middle effects, is gone. You start clean. The `.mission/` files carry your shared orientation forward.
-
----
+You are resuming a mission with fresh context. Your old context, with its drift and stale assumptions, is gone, and the `.mission/` files carry the shared orientation forward.
 
 ## Reorientation procedure
 
 ### 1. Observe — Read the state from disk
 
-Read these files in order (background first, current task last — recency anchoring):
+Read these files in order, so the current state is freshest in context:
 
 1. `.mission/plan.md` — the full plan (shared intent)
-2. `.mission/learnings.md` — if it exists, patterns from earlier work (shared experience)
-3. `.mission/progress.md` — current state (shared situation awareness) — **read this last** so it's freshest in context
+2. `.mission/learnings.md` — if it exists, patterns from earlier work
+3. `.mission/progress.md` — current state
 
-If `.mission/plan.md` doesn't exist: "No mission plan found. Run `/mission:plan <task>` first." Stop.
+If `.mission/plan.md` doesn't exist, say "No mission plan found. Run `/mission:plan <task>` first." and stop.
 
-### 2. Orient — Build your mental model
+### 2. Orient
 
-From the files, identify:
-- Which milestones are completed (`[x]`)
-- Which milestone is next (first `[ ]` or `[>]`)
-- Any notes about blockers, partial work, or discoveries
-- The acceptance criteria for the next milestone
+From the files, identify the completed milestones (`[x]`), the next milestone (first `[ ]` or `[>]`), any blockers, partial work, or discoveries, and the next milestone's acceptance criteria.
 
-### 3. Announce — Confirm orientation
+### 3. Announce
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -49,19 +41,8 @@ Resuming:  Milestone {N+1}: {title}
 
 ### 4. Mismatch check
 
-If progress notes mention partially completed work:
-- Read the relevant source files from disk
-- Run a quick verification — does the current state match what progress.md claims?
-- If there's a mismatch between progress notes and actual file state, trust the FILES. Update progress.md to reflect reality.
+If progress notes mention partially completed work, read the relevant source files and run a quick verification. If progress.md disagrees with the actual file state, trust the files and update progress.md to match.
 
-### 5. Execute — Enter the OODA cycle
+### 5. Execute
 
-Follow the execution protocol in [../../references/execution-protocol.md](../../references/execution-protocol.md) starting from the **next incomplete milestone**.
-
-## The principle
-
-**You have fresh context. This is an advantage, not a handicap.** You don't carry forward stale assumptions, accumulated drift, or mid-context attention degradation. You start with a clean orientation built from ground truth (the files).
-
-- Re-read source files before editing them. Don't assume you know what they contain.
-- Re-read the plan before each milestone. Don't assume you remember the criteria.
-- If something feels off, it probably is. Investigate the mismatch.
+Follow [../../references/execution-protocol.md](../../references/execution-protocol.md) from the **next incomplete milestone**. Re-read source files and the plan before each milestone instead of relying on memory.

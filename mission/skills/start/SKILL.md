@@ -12,70 +12,20 @@ effort: high
 
 You are beginning execution. Each milestone is its own OODA cycle: orient to the milestone, act on it, observe the results, reorient for the next.
 
----
+## Pre-flight
 
-## Pre-flight: Orient to the mission
+1. If `.mission/plan.md` doesn't exist, say "No mission plan found. Run `/mission:plan <task>` first." and stop.
+2. If `.mission/progress.md` doesn't exist, say "No progress file found. Run `/mission:plan <task>` first." and stop.
+3. Read both files. If milestones are already done, ask: "Previous progress detected. Resume with `/mission:continue`, or restart from milestone 1?"
+4. Run the plan's build, test, and lint commands once. If one fails, fix the environment before starting, because a broken environment contaminates every later observation.
 
-1. Check that `.mission/plan.md` exists. If not: "No mission plan found. Run `/mission:plan <task>` first." Stop.
+## Execution
 
-2. Check that `.mission/progress.md` exists. If not: "No progress file found. Run `/mission:plan <task>` first." Stop.
+Follow [../../references/execution-protocol.md](../../references/execution-protocol.md) from **Milestone 1**. It covers the per-milestone loop, validation, failure recovery, and context management.
 
-3. Read `.mission/plan.md` — load the full plan into your orientation.
+Rules that hold throughout:
 
-4. Read `.mission/progress.md` — if milestones are already done, ask: "Previous progress detected. Resume with `/mission:continue`, or restart from milestone 1?"
-
-5. **Mismatch check**: Read the plan's build/test/lint commands and run them once. Do they work? If not, fix the environment before starting. Starting with a broken environment means every observation will be contaminated.
-
-## Execution: The Milestone OODA Loop
-
-Follow the execution protocol in [../../references/execution-protocol.md](../../references/execution-protocol.md) starting from **Milestone 1**.
-
-Each milestone follows the OODA cycle:
-
-### Orient
-- Re-read `.mission/plan.md` for this milestone's goal and acceptance criteria
-- Re-read `.mission/progress.md` for current state
-- Read the source files you'll be modifying — never edit from memory
-- If `.mission/learnings.md` exists, check for relevant patterns
-
-### Decide (or act implicitly)
-- **Familiar pattern?** Act directly. Standard CRUD, common test setup, well-known library usage — move with implicit guidance.
-- **Novel situation?** Deliberate explicitly. Unfamiliar architecture, unexpected file structure, complex integration — slow down, read the relevant code, and think before acting.
-
-### Act
-- Write code, staying scoped to THIS milestone only
-- Commit after each meaningful change: `mission(N/total): {description}`
-- Every action is a hypothesis: "I believe this change will make the acceptance criteria pass"
-
-### Observe
-- Run ALL acceptance criteria. This is reality speaking to you — listen.
-- If they pass: update progress, proceed to next milestone
-- If they fail: you have a **mismatch**. Reorient before retrying. See failure recovery below.
-
-## Failure Recovery: Destruction and Creation
-
-When acceptance criteria fail, Boyd's principle applies: **don't retry blindly. Reorient.**
-
-**Level 1 — Fix (attempt 1-3):** Read the error. It's observation data. Orient to what it's telling you. Fix the specific issue. Re-run.
-
-**Level 2 — Destroy and create (after 3 failures):** Your mental model is wrong. Stop coding.
-  - Re-read the relevant source files FROM DISK (not from memory)
-  - Re-read the error messages — what are they actually saying?
-  - What assumption did you make that was wrong?
-  - Destroy the old approach. Build a new one from the pieces + new information.
-  - If the plan itself is wrong, tell the user: "This milestone needs rethinking. Run `/mission:pivot`."
-
-**Level 3 — Escalate:** Write what you tried to `.mission/progress.md`. State the goal, what failed, your best guess at root cause. Ask the user for direction.
-
-## Context Management
-
-- **After completing a milestone**, if the conversation is long (20+ minutes of work, many file reads): recommend `/clear` → `/mission:continue`. Fresh context is forced reorientation — a feature, not a bug.
-- **Use subagents sparingly.** Delegate only when the user requests it or independent parallel work clearly repays the coordination cost.
-- **Keep the current milestone freshest in context.** Read background files first, then the current milestone details last. LLMs attend most strongly to the end of context (recency anchor).
-
-## Key Rules
-
-- **Never skip validation.** Every action is a hypothesis. Test it.
-- **Never self-assess.** "It looks right" is not observation. Run the command.
-- **Never expand scope.** Only touch files in THIS milestone. New work = `/mission:pivot`.
-- **Commit per milestone.** Each passing milestone gets a checkpoint commit.
+- Run the acceptance criteria. Reading your own code and judging it correct is not validation.
+- Touch only files in the current milestone. New work goes through `/mission:pivot`.
+- Commit after each meaningful change as `mission(N/total): {description}`, and make sure each passing milestone ends in a checkpoint commit.
+- Use subagents only when the user requests them or independent parallel work clearly repays the coordination cost.
