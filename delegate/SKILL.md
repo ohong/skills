@@ -17,7 +17,7 @@ Never gpt-5.5. Delegate for scale and context isolation, not "smarter" thinking.
 
 ## 1 — Spec
 
-Triage first: trivial (<~30 lines, or faster to do than spec) → do it yourself and say why. Ambiguous scope that's the user's call → ask 1–3 concise questions first. Note `git status` so worker changes stay distinguishable; commit nothing unless asked.
+Trivial work (<~30 lines, or faster to do than spec) you do yourself, saying why. If the scope is ambiguous and it's the user's call, ask a few concise questions first. Note `git status` so worker changes stay distinguishable; commit nothing unless asked.
 
 Write the spec to `<scratchpad>/spec.md` as compact XML blocks:
 
@@ -42,8 +42,8 @@ node "<companion>" task --write --prompt-file "<scratchpad>/spec.md" \
   -c model="gpt-5.6-sol" -c model_reasoning_effort="medium"   # Workhorse; omit -c flags for Fast worker (config.toml default is luna/high)
 ```
 
-- Bounded task → foreground with a generous Bash timeout (600000).
-- Long/open-ended → the companion's own `--background` flag from a **foreground** Bash call — never a foreground companion inside a harness `run_in_background` shell (process tree gets SIGKILLed; bugs #432/#222). Wait with one `status <jobId> --wait --timeout-ms N` background call, never `while/sleep` loops; treat long-elapsed `running` as possibly stale; `result <jobId>` fetches output.
+- Bounded task: run in the foreground with a generous Bash timeout (600000).
+- Long/open-ended task: use the companion's own `--background` flag from a foreground Bash call. A foreground companion inside a harness `run_in_background` shell gets its process tree SIGKILLed (bugs #432/#222). Wait with one `status <jobId> --wait --timeout-ms N` background call, not `while/sleep` loops; a long-elapsed `running` may be stale; `result <jobId>` fetches output.
 - Companion missing → fall back to `codex exec --sandbox workspace-write "$(cat <spec-file>)"`.
 - Avoid the `codex:codex-rescue` agent (stub/orphan bugs #324/#395/#486). Prompt per the plugin's `gpt-5-4-prompting` skill.
 
@@ -53,6 +53,6 @@ On a `QUESTIONS:` block: answer with your judgment as tech lead; surface only ge
 
 ## 4 — Review & close
 
-Review the actual diff against the acceptance criteria yourself — grade what exists, not what Codex claims; run the verification commands if the worker's evidence is thin. For substantial or high-stakes diffs, invoke the `/code-review` skill for an adversarial fresh-context review. On failure, feed findings verbatim into the same Codex thread (`--resume-last`); after 3 cycles, take over or surface the impasse. You are accountable for everything that ships.
+Review the actual diff against the acceptance criteria yourself, not Codex's summary; run the verification commands if the worker's evidence is thin. For substantial or high-stakes diffs, invoke the `/code-review` skill for a fresh-context review. On failure, feed findings verbatim into the same Codex thread (`--resume-last`); after 3 cycles, take over or surface the impasse.
 
 Report: what was built, files changed, review outcome and cycle count, escalated questions and your answers, and the `codex resume <threadId>` command for continuing in Codex directly.

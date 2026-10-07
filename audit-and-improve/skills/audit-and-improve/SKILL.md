@@ -18,45 +18,36 @@ args:
 
 # Audit & Improve
 
-You are a world-class, principal-level software engineer and technical auditor.
-Your job is to deeply analyze this repository, produce an honest audit, and
-deliver a prioritized, actionable improvement plan.
-
-Work through the four phases below **in order**. Do not skip ahead. Discovery
-before judgment; judgment before strategy; strategy before tasks.
+Audit this repository as a principal-level engineer and deliver an honest,
+prioritized improvement plan. Work through the four phases below in order:
+discovery, judgment, strategy, tasks.
 
 ## Operating rules (apply to every phase)
 
-- **Analysis only — do NOT modify any code during the audit.** No edits, no
-  refactors, no "while I'm here" fixes. Read, search, and run read-only commands
-  only. The improvement *happens after* the report is delivered and the user
-  opts in (see "After the report").
+- **Analysis only.** Don't modify code during the audit. Read, search, and run
+  read-only commands only. Improvement starts after the report is delivered and
+  the user opts in (see "After the report").
 - **Ground every claim in actual files.** Cite `file:line`. If you cannot verify
   something, say so explicitly rather than guessing.
 - **Separate facts from judgments and label which is which.** A fact is
   "`src/api/client.ts:142` swallows the exception with an empty catch." A
   judgment is "this module's responsibilities feel unclear." Both are allowed;
   mixing them silently is not.
-- **Prefer ~15 high-confidence findings over 50 speculative ones.** Depth and
-  correctness beat volume.
+- **Prefer ~15 high-confidence findings over 50 speculative ones.**
 - **Calibrate to the project's maturity.** Don't prescribe enterprise
   infrastructure for a weekend prototype, or wave away real risk in a production
   service. Match recommendations to the project's evident goals and stage.
 - **Fit the existing culture.** Recommend changes that extend the conventions
   already in use, not ones that fight them — unless a convention is itself the
   problem (say so).
-- **No padding.** If a dimension is healthy, say so in one sentence and move on.
-- **Be honest about the ugly parts.** If something is genuinely broken,
-  dangerous, or rotting, say so plainly and rank it at the top. Do not soften
-  critical findings to be polite.
+- **Healthy dimensions get one sentence.** Broken, dangerous, or rotting things
+  get stated plainly and ranked at the top.
 - **If the repo is large**, prioritize depth in the core ~20% of code that does
   ~80% of the work. Explicitly note which areas got lighter review.
 
 ---
 
 ## Phase 1 — Discovery & Mapping (read before judging)
-
-Explore the repository systematically *before forming any opinions.*
 
 1. **Map the structure.** Identify the project type, language(s), frameworks,
    and runtime targets. Note the directory layout.
@@ -71,13 +62,9 @@ Explore the repository systematically *before forming any opinions.*
 5. **Note existing conventions.** Naming, module boundaries, error-handling
    patterns, test style — so later recommendations fit the existing culture.
 
-**Useful read-only moves** (adapt to the stack; never write):
-- List the tree, then read the manifest and lockfile to learn the dependency
-  surface and scripts.
-- Read the CI/build config to learn what's enforced today.
-- Skim the largest source files and the busiest directories first.
-- `git log --oneline -20` and `git shortlog -sn` for recent activity and
-  ownership signals (read-only; skip if not a git repo).
+Useful read-only moves: skim the largest source files and busiest directories
+first, and run `git log --oneline -20` and `git shortlog -sn` for activity and
+ownership signals (skip if not a git repo).
 
 **Output of Phase 1 — a concise "Repo Map":** purpose, stack, a short
 architecture sketch, key directories with one-line descriptions, and anything
@@ -129,15 +116,13 @@ Severity guide:
 
 ### Rules for this phase
 
-- Keep it high-confidence. When you assert a CVE, a swallowed exception, or an
-  N+1, you should be able to point at the exact line.
-- **Also list what the repo does well.** Strengths decide what to *preserve*
-  during the improvement phase — they are not filler.
-- Surface the worst problems first and do not bury them.
+- Keep it high-confidence: point at the exact line for any CVE, swallowed
+  exception, or N+1 you assert.
+- Also list what the repo does well. Strengths decide what to preserve during
+  improvement.
 
 **Output of Phase 2 — an "Audit Report":** findings grouped by dimension, sorted
-by severity within each group, plus a **Strengths** section. For any dimension
-that is healthy, one sentence and move on.
+by severity within each group, plus a **Strengths** section.
 
 ---
 
@@ -219,8 +204,7 @@ Write the full document to a file in the repo, then give a short summary in chat
 
 ## After the report (the "improve" step — opt-in)
 
-The audit phase is complete and you have written nothing but the report. Now
-offer to act, and **wait for the user to choose** before touching code:
+Offer to act, and wait for the user to choose before touching code:
 
 > The audit is in `<path>`. Want me to start on **Milestone 0 (safety net)**, knock
 > out the **quick wins**, or stop here?

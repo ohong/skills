@@ -12,9 +12,9 @@ description: >
 
 # Press Release / FAQ (Working Backwards)
 
-Write the press release and FAQ *before* the product exists — Amazon's Working Backwards method (Bryar & Carr). The PR/FAQ is a truth-seeking document, not a sales pitch. Its job is to force clarity on who the customer is, what problem is being solved, and why this solution is meaningfully better than what exists today. Most PR/FAQs should reveal weaknesses; that is the point.
+Write the press release and FAQ *before* the product exists, using Amazon's Working Backwards method (Bryar & Carr). The PR/FAQ is a truth-seeking document, not a sales pitch: it forces clarity on who the customer is, what problem is solved, and why this solution beats what exists today. It should reveal weaknesses.
 
-Run fully autonomously. Make every judgment call yourself (customer segment, launch date, pricing, differentiation). Do not ask the user questions.
+Run autonomously: decide customer segment, launch date, pricing, and differentiation yourself, and ask the user nothing.
 
 ## Scope
 
@@ -34,9 +34,9 @@ Extract: what the product is, who it seems to be for, what problem it addresses,
 
 ## Step 2 — Work backwards from the customer
 
-Before writing, answer these for yourself (they shape every sentence):
+Before writing, settle these:
 
-- **Who exactly is the customer?** A specific segment, never "everyone." If the docs say "developers," decide *which* developers.
+- **Who exactly is the customer?** One specific segment, not "everyone." If the docs say "developers," decide *which* developers.
 - **What is their most important problem?** From the customer's point of view, not the builder's. Not all problems are equal — pick the one with the largest willingness to pay.
 - **What do they use today?** There is always a current solution. Name it.
 - **On which dimension is this better, cheaper, or faster?** If the answer is "none," the PR/FAQ should say so honestly in the FAQ — do not paper over a copycat.
@@ -46,7 +46,7 @@ Customer backwards, not skills forward: describe the product customers need, eve
 
 ## Step 3 — Write the press release (≤ 500 words)
 
-Written as if launch day has arrived. Plain language a customer would use — no corporate jargon, no internal terminology from the codebase. Structure:
+Written as if launch day has arrived, in plain customer language with no corporate jargon or internal codebase terms. Structure:
 
 1. **Heading** — product name plus one sentence any target customer instantly understands.
 2. **Subheading** — one sentence: who the customer is and the benefit they get. Be precise about the segment.
@@ -56,7 +56,7 @@ Written as if launch day has arrived. Plain language a customer would use — no
 6. **Quotes** — one from a company spokesperson (invent a plausible name/title), one from a hypothetical customer describing the benefit in concrete terms.
 7. **Getting started** — how easy it is to begin, with a call to action.
 
-Quality bar: a reader should finish the PR excited to use the product. If the PR describes something no better/faster/cheaper than existing options, that's a "Phoenix 400" — rework the positioning or surface the problem loudly in the FAQ rather than shipping a bland PR.
+Quality bar: a reader should finish the PR excited to use the product. If the product is no better, faster, or cheaper than existing options (a "Phoenix 400"), rework the positioning or surface the problem in the FAQ.
 
 ## Step 4 — Write the FAQ (≤ 500 words)
 
@@ -73,7 +73,7 @@ The PR names the destination; the FAQ is the map and the dragons. Two sections, 
 - What must be true for this product to succeed?
 - What are the top three reasons this will fail?
 
-Answers must be optimistic but realistic — grounded in what the codebase and docs actually support, honest about risks and unknowns. Never sell. If the TAM looks small or the differentiation thin, say so plainly; a PR/FAQ that kills a bad idea has done its job.
+Answers are optimistic but realistic: grounded in what the codebase and docs support, honest about risks and unknowns. If the TAM looks small or the differentiation thin, say so plainly; a PR/FAQ that kills a bad idea has done its job. Root claims in the repo's docs and code: the vision may exceed the current implementation but must not contradict it.
 
 ## Step 5 — Output
 
@@ -81,14 +81,3 @@ Answers must be optimistic but realistic — grounded in what the codebase and d
 - File structure: `# Press Release` section, then `# FAQ` section (with `## External` and `## Internal` subsections).
 - Verify both word counts before finishing (PR ≤ 500, FAQ ≤ 500, excluding headings). Trim until compliant.
 - End your response with a 2–3 sentence honest assessment: the strongest claim in the PR, and the biggest risk the FAQ surfaced.
-
-## Rules
-
-- **Customer's point of view, always.** Every problem and benefit is framed as the customer experiences it.
-- **One specific customer segment.** "Everyone" is a failure.
-- **Name the competition.** There is always a current solution; state why customers would switch.
-- **Truth-seeking, not selling.** Include the uncomfortable questions and answer them honestly.
-- **No jargon.** If a customer wouldn't say it, don't write it.
-- **Grounded but not constrained.** Root claims in the repo's docs and code; let the vision exceed current implementation, never contradict it.
-- **Hard word limits.** 500 words each for PR and FAQ. Count, then trim.
-- **Autonomous.** Decide everything; ask nothing.

@@ -12,12 +12,11 @@ description: >
 
 # Vibe Security Audit
 
-You are a security-aware coding assistant. Your job is to catch the class of vulnerabilities that
-"vibe coding" — building apps fast with AI, minimal review, and shipping immediately — routinely
-produces. These aren't exotic zero-days. They're missing basics: a toggle left off, a secret pasted
-in the wrong file, a database table with no access policy. But the consequences are catastrophic.
+Catch the class of vulnerabilities that "vibe coding" (building fast with AI, minimal review, shipping
+immediately) routinely produces. They're missing basics: a toggle left off, a secret pasted in the
+wrong file, a table with no access policy. The consequences are still catastrophic.
 
-The Moltbook breach is your case study. A social platform for AI agents shipped to production with
+The Moltbook breach is the case study. A social platform for AI agents shipped to production with
 a Supabase backend that had **zero Row Level Security policies**. A researcher found the API key
 in the client JS within minutes, and from there had full read/write access to the entire database:
 1.5M agent credentials, 35K user emails, private messages containing plaintext OpenAI API keys.
@@ -25,7 +24,7 @@ Every vulnerability in this skill traces back to a real pattern from that incide
 
 ## When to Activate
 
-Run this audit automatically whenever you are:
+Run this audit whenever you are:
 
 - **Building or modifying** a web app with a BaaS backend (Supabase, Firebase, Appwrite, Nhost)
 - **Writing database schemas or migrations** — especially with Supabase
@@ -35,8 +34,8 @@ Run this audit automatically whenever you are:
 - **Reviewing existing code** the user shares or uploads
 - **Deploying an application** or discussing deployment
 
-You don't need the user to say "audit my code." If you spot a vulnerability while helping them
-build something, flag it immediately and fix it in your output.
+The user doesn't need to ask for an audit. If you spot a vulnerability while helping them build
+something, flag it and fix it in your output.
 
 ## The Seven Deadly Sins of Vibe Coding
 
@@ -53,14 +52,13 @@ that public key becomes a master key to the entire database.
 (visible in the JS bundle) could query, insert, update, or delete any row in any table.
 
 **What to check:**
-- Every Supabase table MUST have RLS enabled: `ALTER TABLE ... ENABLE ROW LEVEL SECURITY;`
-- Every table MUST have at least one policy defined — RLS enabled with no policies = deny all,
-  but this is fragile and confusing; explicit policies are required
+- Every Supabase table has RLS enabled: `ALTER TABLE ... ENABLE ROW LEVEL SECURITY;`
+- Every table has at least one explicit policy (RLS with no policies denies all, which is fragile
+  and confusing)
 - Policies should follow least privilege: users read/write only their own data
-- Service role keys must NEVER appear in client code
+- Service role keys never appear in client code
 
-**Auto-fix pattern:** When writing Supabase migrations, always append RLS enablement and policies.
-Never create a table without them.
+**Auto-fix pattern:** When writing Supabase migrations, append RLS enablement and policies to every table.
 
 ### 2. Secrets in Client-Side Code — CRITICAL
 
@@ -153,8 +151,6 @@ to make requests to your backend.
 
 ## Audit Procedure
 
-When auditing code, follow this sequence:
-
 ### Step 1: Inventory
 
 Identify the tech stack and all connection points:
@@ -165,17 +161,15 @@ Identify the tech stack and all connection points:
 
 ### Step 2: Scan for Critical Issues
 
-Check for Sins 1-3 first. These are the "building is on fire" issues.
-Read `references/vulnerability-patterns.md` for specific code patterns to search for.
+Check Sins 1-3 first; they are the urgent ones. Read `references/vulnerability-patterns.md` for the code patterns to search for.
 
 ### Step 3: Report & Fix
 
 For each issue found:
-1. **State the vulnerability** in plain language (assume the user may be new to security)
+1. **State the vulnerability** in plain language (the user may be new to security)
 2. **Explain the real-world impact** — what could an attacker actually do?
-3. **Provide the fix** — don't just warn, write the corrected code
-4. **Verify the fix** — if you have access to the project, confirm RLS is enabled, secrets are
-   removed from client code, etc.
+3. **Provide the fix** as corrected code, not just a warning
+4. **Verify the fix** if you have project access (RLS enabled, secrets removed from client code, etc.)
 
 ### Step 4: Preventive Measures
 
@@ -202,23 +196,21 @@ When reporting findings, use this structure:
 🟢 PASS: [What was checked and found to be secure]
 ```
 
-Always end with a summary: how many critical/high/medium issues found, how many fixed,
+End with a summary: how many critical/high/medium issues found, how many fixed,
 and any remaining action items the user needs to handle (like rotating compromised keys).
 
 ## Supabase-Specific Guidance
 
-Since Supabase is the most common BaaS in vibe-coded apps and was the platform involved in
-the Moltbook breach, here's a quick-reference for the most important configurations.
-For complete code templates, see `references/vulnerability-patterns.md`.
+Quick reference for Supabase, the most common BaaS in vibe-coded apps. For complete code templates, see `references/vulnerability-patterns.md`.
 
 **Every new table migration should include:**
 ```sql
 CREATE TABLE my_table ( ... );
 
--- ALWAYS enable RLS
+-- Enable RLS
 ALTER TABLE my_table ENABLE ROW LEVEL SECURITY;
 
--- ALWAYS define at least one policy
+-- Define at least one policy
 CREATE POLICY "Users can read own data"
   ON my_table FOR SELECT
   USING (auth.uid() = user_id);
@@ -230,7 +222,7 @@ CREATE POLICY "Users can insert own data"
 
 **Never do this in client code:**
 ```javascript
-// ❌ NEVER — service role key in the browser
+// ❌ service role key in the browser
 const supabase = createClient(url, 'eyJhbGciOiJIUzI1NiIs...');
 
 // ✅ CORRECT — anon key only, with RLS protecting the data
@@ -242,10 +234,10 @@ const supabase = createClient(
 
 ## Tone and Approach
 
-You're a helpful security reviewer, not a scary auditor. Many vibe coders are new to development
-and don't know what RLS is — that's fine. Explain *why* each fix matters using concrete examples:
+Be a helpful reviewer, not a scary auditor. Many vibe coders are new to development and don't know
+what RLS is. Explain *why* each fix matters with concrete examples:
 "Without this policy, anyone who views your page source can read your entire database, just like
 what happened to Moltbook when a missing RLS policy exposed 1.5 million API keys."
 
-Be direct about severity. Don't soften "your entire database is publicly readable" into "you
-might want to consider adding some access controls." But pair every warning with a working fix.
+Be direct about severity ("your entire database is publicly readable", not "consider adding some
+access controls"), and pair every warning with a working fix.
