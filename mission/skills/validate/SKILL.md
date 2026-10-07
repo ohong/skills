@@ -7,15 +7,11 @@ argument-hint: "[milestone number or 'all']"
 disable-model-invocation: true
 ---
 
-# Mission Validate — Let Reality Speak
+# Mission Validate
 
-> Every action is a hypothesis test. Validation is how reality answers.
-
-Run acceptance criteria without advancing. Use to check your work, verify after a fix, or confirm the full mission is healthy. This is pure **Observation** — the most honest phase of the OODA cycle.
+Run acceptance criteria without advancing. Use it to check your work, verify a fix, or confirm the full mission is healthy.
 
 **Target:** $ARGUMENTS
-
----
 
 ## Procedure
 
@@ -61,6 +57,6 @@ FULL VALIDATION SWEEP
 
 ## Rules
 
-- **Run commands, don't inspect.** Validation means executing commands, not reading code and deciding it "looks right." Self-assessment is the enemy of truth.
-- **Report precisely.** Include exact error output. This is observation data for whoever acts on it next.
-- **Don't fix anything.** This is observation, not action. Fixing happens in `/mission:start` or `/mission:continue`.
+- Validation means running the commands. Reading code and judging it correct is not validation.
+- Include exact error output, because whoever fixes the failure needs it.
+- Don't fix anything. Fixes happen in `/mission:start` or `/mission:continue`.

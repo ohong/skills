@@ -8,9 +8,7 @@ disable-model-invocation: true
 
 # Mission Status — Observe
 
-Pure observation. Read the state, report it, suggest next action. Do not execute any work.
-
----
+Read the state, report it, and suggest the next action. Do not execute any work.
 
 ## Procedure
 
