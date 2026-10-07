@@ -32,10 +32,26 @@ Add the marketplace, then install the plugins you want:
 
 | Skill | Description |
 |---|---|
+| [architect](architect/) | Compares architecture designs and prototypes uncertain claims before implementation. |
+| [ask-lulu](ask-lulu/skills/ask-lulu/) | Gives communications advice and work reviews through a research-grounded model of Lulu Cheng Meservey. |
+| [benchmark-checklist](benchmark-checklist/) | Validates performance measurements and user-visible impact. |
+| [correct](correct/) | Fixes recurring agent mistakes through architecture, types, and enforceable checks. |
+| [create-mascot](create-mascot/skills/create-mascot/) | Designs an original product mascot and builds it as an editable, animatable Blender asset. |
 | [delegate](delegate/) | Delegates substantial work through a structured multi-agent implementation and review loop. |
 | [explain](explain/) | Explains session outcomes, key changes, decisions, verification, and unfinished work. |
+| [explainer-video](explainer-video/) | Creates narrated videos for codebases, subsystems, and PR changes with Manim, fast speech, and ffmpeg. |
+| [figure-it-out](figure-it-out/) | Designs and executes evidence-backed workflows for substantial migrations. |
+| [how](how/) | Explains a subsystem or repository through traced source and current behavior. |
+| [interrogate](interrogate/) | Challenges designs and diffs with evidence-backed review findings. |
+| [pls-fix](pls-fix/) | Revives paused projects through fresh assessment, implementation, design improvement, and real user-flow verification. |
+| [poteto-mode](poteto-mode/) | Coordinates portable engineering playbooks with explicit planning and delivery gates. |
 | [press-release-faq](press-release-faq/) | Writes an Amazon-style Working Backwards PR/FAQ grounded in the current project. |
+| [recall](recall/) | Recovers relevant project history and verifies its current state. |
+| [show-me-your-work](show-me-your-work/) | Keeps a concise decision trail backed by inspectable artifacts. |
+| [skill-authoring](skill-authoring/) | Keeps new and edited skills, commands, and agent definitions thin, deterministic, and progressively disclosed. |
 | [spring-cleaning](spring-cleaning/) | Produces a measured, prioritized runbook for safely freeing disk space on a Mac. |
+| [swarm](swarm/) | Coordinates authorized parallel workers with isolated scopes and verified coverage. |
+| [switch-model](switch-model/) | Switches Codex's default model and provider, including Fireworks serverless models. |
 | [take-notes](take-notes/) | Saves transcript-only learnings, references, and full next prompts in one durable note per Codex session. |
 | [transcribe-youtube](transcribe-youtube/) | Transcribes YouTube links through usetranscribe.io and saves timestamped Markdown. |
 | [vibe-security-audit](vibe-security-audit/) | Audits application security risks across authentication, data, and deployment boundaries. |
