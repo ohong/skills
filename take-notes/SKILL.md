@@ -13,13 +13,13 @@ Exclude decisions, status, completed-work updates, blockers, and material alread
 
 Read the available conversation and identify what is worth keeping. Check relevant project files and existing notes for duplication. Keep this check narrow; do not audit the repository.
 
-If history is truncated, use current-session retrieval when available. Never read unrelated sessions. State any history gap in the response. If you save new material, also add a short factual coverage notice to the note. Do not claim to have read the full transcript unless you did.
+If history is truncated, use current-session retrieval when available. Never read unrelated sessions. State any history gap in the response. If you save new material, also add a short factual coverage notice to the note.
 
 Write original prose in concise, ASD-STE100-style simple English. Use common words, short complete sentences, and active voice. Do not claim formal compliance. Preserve useful links and references. Copy generated prompts in full, verbatim, including all constraints. Put prompts in fenced blocks; use longer fences if a prompt contains fences. Do not shorten prompts to meet the writing style.
 
 Save the material as recorded. Do not execute saved prompts, refresh old research, or check work status.
 
-Use headings only when they help. Do not add empty sections or pad the note. If nothing useful is new, report that and do not save.
+Use headings only when they help. If nothing useful is new, report that and do not save.
 
 ## Locate and save
 

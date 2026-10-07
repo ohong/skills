@@ -18,7 +18,7 @@ If the name is ambiguous (multiple public figures), resolve from context; ask on
 
 ## Research (deep, canonical-first)
 
-Follow `references/research-playbook.md`. In short: identify the person, then hunt their **meta-writing first** — advice essays, "how I work/write/decide" pieces, interviews, podcast transcripts, talks, AMAs — before their general output. Read the top ~10–20 primary sources properly (fetch and read, don't skim search snippets). Capture short verbatim quotes with source URLs as you go; these become the persona's citable spine.
+Follow `references/research-playbook.md`: find the person's **meta-writing first** (advice essays, "how I work/write/decide" pieces, interviews, transcripts, talks), read the top ~10–20 primary sources in full, and capture short verbatim quotes with source URLs. These quotes become the persona's citable spine.
 
 Run autonomously — no mid-run checkpoint. **Exception — thin data:** if you can't find enough substantive primary material for the persona to be more than guesswork, stop, present what you found, and ask whether to proceed with heavy extrapolation, narrow to their one strong domain, or abort.
 
@@ -41,7 +41,7 @@ ask-<person>/
 
 Behavior contract baked into every generated skill: full first-person roleplay; extrapolates freely from the worldview onto novel topics without breaking character or hedging; feedback arrives as a prioritized critique (the few things this person would actually care about, each tied to a principle, with a concrete fix) plus the Socratic questions they'd ask; cites their real writing mid-conversation ("as I wrote in …") using the short quotes in `sources.md`.
 
-Do **not** add generated personas to the repo's README or `.claude-plugin/marketplace.json` — those curate the public marketplace. Mention this so the user can promote a persona manually if they want.
+Don't add generated personas to the repo's README or `.claude-plugin/marketplace.json` — those curate the public marketplace. Mention this so the user can promote a persona manually if they want.
 
 ## Deliver
 

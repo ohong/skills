@@ -14,7 +14,7 @@ If Blender cannot be made available within existing authorization, finish the co
 | Deforming armature with selected shape keys | Continuous bodies, bending limbs, facial or silhouette changes | Supports smooth deformation; needs topology and weight checks |
 | A deliberate hybrid | Rigid eyes or props on a soft body, mixed materials | Supports distinct mechanics; control ownership must remain clear |
 
-Choose the simplest construction that reproduces the selected poses. Do not impose a universal armature, limb count, or blob generator. Keep geometry native and editable. Flat graphic characters can use native curves, shallow geometry, and articulated parts; a `.blend` does not require a soft 3D aesthetic. Textured facial planes can be rig components, but a whole character on one image billboard is not editable mascot geometry.
+Choose the simplest construction that reproduces the selected poses, not a default armature, limb count, or blob generator. Keep geometry native and editable. Flat graphic characters can use native curves, shallow geometry, and articulated parts; a `.blend` does not require a soft 3D aesthetic. Textured facial planes can be rig components, but a whole character on one image billboard is not editable mascot geometry.
 
 Build the silhouette and identity features first. Establish useful scale, forward/up axes, origins, and neutral transforms. Add topology where the selected motion needs deformation. Check extreme poses for collapsed volume, intersecting face parts, broken contact, or detached features before polishing materials.
 
@@ -46,4 +46,4 @@ Mechanical verification and visual review answer different questions. Perform bo
 
 Report what ran and what remains unverified. If render or playback inspection is unavailable, state that limit rather than treating file structure as visual proof. Native Blender validation does not establish glTF export correctness, browser speed, or product integration.
 
-Deliver `<mascot-name>.blend` and `<mascot-name>.md`. The Markdown description explains physical identity, expression, movement, and available controls/clips. Count its words and keep it at most 300. Keep the detailed technical map inside Blender. Intermediate images, backups, and diagnostic outputs need not be user deliverables.
+The Markdown description explains physical identity, expression, movement, and available controls/clips, in at most 300 words. Keep the detailed technical map inside Blender. Intermediate images, backups, and diagnostic outputs are not deliverables.

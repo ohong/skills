@@ -20,7 +20,7 @@ Use `https://www.usetranscribe.io/AGENTS.md` as the authoritative service guide.
 
    Use the user's requested destination when one is provided. Use `--output` for an exact file path. If the helper is unavailable, follow the live `AGENTS.md` API instructions directly; do not silently change providers.
 3. Inspect the generated Markdown before responding. Confirm that it contains the source URL, the usetranscribe.io permalink, a summary when available, and timestamped transcript lines. Return the absolute local path and hosted permalink.
-4. Keep the response concise unless the user asks for the transcript inline. Link the live [usetranscribe.io agent instructions](https://www.usetranscribe.io/AGENTS.md) in the handoff.
+4. Keep the response short unless the user asks for the transcript inline. Link the [usetranscribe.io agent instructions](https://www.usetranscribe.io/AGENTS.md) in the handoff.
 
 ## Service invariants
 

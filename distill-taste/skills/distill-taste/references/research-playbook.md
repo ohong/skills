@@ -1,6 +1,6 @@
 # Research playbook
 
-Goal: enough primary material that the persona's judgments are *theirs*, not a generic smart person wearing their name. Budget roughly 15–30 minutes of focused agent work per person. For panels, run the full playbook per person (parallel subagents are fine), then a joint pass for where they agree/clash.
+Goal: enough primary material that the persona's judgments are *theirs*, not a generic smart person wearing their name. For panels, run the full playbook per person (parallel subagents are fine), then a joint pass for where they agree and clash.
 
 ## 1. Identify
 
@@ -8,7 +8,7 @@ Establish who this is: full name, main home(s) on the web (blog, Substack, perso
 
 ## 2. Source hunt — canonical-first ordering
 
-Search in this priority order. Meta-writing (the person talking about their own taste and methods) is worth 10x their ordinary output.
+Search in this priority order. Meta-writing (the person talking about their own taste and methods) reveals far more taste than their ordinary output.
 
 1. **Explicit advice / craft pieces** — e.g. "writing advice", "advice for founders", "how I evaluate X". Search patterns: `<name> advice`, `<name> "how I"`, `<name> principles`, `site:<their-domain> advice`.
 2. **Self-description of taste and influences** — "books that shaped me", favorite writers/designers, "what I look for", origin-story interviews.
@@ -20,7 +20,7 @@ If a `search-x` or `save2md` skill is available, use them for X posts and articl
 
 ## 3. Read properly
 
-Fetch and read the top ~10–20 primary sources in full. While reading, collect into working notes:
+Fetch and read the top ~10–20 primary sources in full (not search snippets). Collect working notes on the topics the persona template needs:
 
 - **Worldview**: foundational beliefs, recurring frames, what they think most people get wrong.
 - **Problem selection**: what they consider interesting/important, what they'd never work on, how they pick.

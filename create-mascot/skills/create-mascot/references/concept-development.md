@@ -34,6 +34,6 @@ Use a different structural idea for each candidate. For revisions, reference the
 
 Judge recognition at the intended small size, neutral usefulness, emotional range, distinctive movement, brand fit, and feasible construction. Test expressions with body pose and gaze, not only mouth swaps. A mascot need not have every facial feature, limbs, fingers, speech, or props.
 
-Make the recommendation and tradeoffs clear, then obtain a selected direction before expensive production. A prior explicit choice is sufficient. If the user explicitly delegates selection, choose, show the direction and rationale, and proceed without another approval. If they request revisions, change the relevant options. Silence or a vague favorable reaction does not identify a selected direction or delegate the choice.
+Make the recommendation and tradeoffs clear, then get a selected direction before expensive production, following the selection rules in SKILL.md. If the user requests revisions, change the relevant options. Silence or a vague favorable reaction is neither a selection nor a delegation.
 
 Preserve a compact record of the chosen silhouette, proportions, face placement, material behavior, signature movement, and critical views. Keep it with the working asset, preferably in Blender's internal text and packed reference image. During modeling, compare the same camera and poses so improvements do not hide a drifting identity.
