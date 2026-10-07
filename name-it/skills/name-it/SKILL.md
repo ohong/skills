@@ -21,7 +21,7 @@ Read this file fully — it is the method. Pull in reference material only when 
 
 ## First principles
 
-1. **Orient before generating — always.** Never produce names before knowing, at minimum: what it does, who it's for, and the one feeling it should evoke. Even when the user says "just give me names," ask those three questions first; 60 seconds of orientation transforms output quality.
+1. **Orient before generating.** Know what it does, who it's for, and the one feeling it should evoke before producing names. Ask those three questions even when the user says "just give me names"; a minute of orientation improves output quality.
 2. **Volume before judgment.** Great names come from candidate #700, not #7. Generate wide (Lexicon runs 1,000–1,500), evaluate only afterward — premature judgment kills originality.
 3. **Comfort is a warning sign.** Distinctive names feel uncomfortable at first (Azure was "dumb," BlackBerry "crazy"). Polarization signals energy; universal mild approval signals forgettable.
 4. **No eureka.** Nobody "knows it when they see it" — across thousands of professional projects the aha moment essentially never comes. Score against criteria instead of waiting for goosebumps.
@@ -41,7 +41,7 @@ Read this file fully — it is the method. Pull in reference material only when 
 
 ## The pipeline
 
-Six phases. Adapt depth to the user's pace — quick mode compresses Phases 1–3 into one exchange; full mode walks each phase. Exit criteria are non-negotiable in either mode.
+Six phases. Adapt depth to the user's pace — quick mode compresses Phases 1–3 into one exchange; full mode walks each phase. Both modes meet each phase's exit criteria.
 
 ### 1. Orientation — know what you're naming (§1, PDF pp. 10–15)
 Interview the user (skip what's already answered; the final decision-maker must be in this conversation):

@@ -58,16 +58,14 @@ with Codex tool-message ordering. Missing or ambiguous IDs fail without changing
 Do not invent model IDs or claim every serverless model supports Codex. Fireworks' model API lists more
 models than it serves, so a generic switch first runs one tiny validation request (developer plus user
 message, at most 64 output tokens). Broken models fail with the server's reason before any file changes;
-dry runs and curated switches run no inference. Example limits found on 2026-09-18: `qwen3p8-max` rejects
-Codex's developer-role messages in its chat template, while `nemotron-lightning-3p5-30b-a3b` passes.
+dry runs and curated switches run no inference. For example, `qwen3p8-max` rejects Codex's developer-role
+messages in its chat template, while `nemotron-lightning-3p5-30b-a3b` passes.
 
 Kimi K3 works in CLI sessions but currently fails in Codex desktop sessions. Fireworks rejects any tool schema
 that sets `type` beside `$ref`, and a desktop app tool sends that shape. The turn ends with
 `stream disconnected before completion: JSON Schema not supported: when using $ref, type should be defined in the
-referenced schema instead of the parent schema.` DeepSeek and GLM accept that shape. Verified on 2026-09-17:
-`kimi-fast-latest` failed in this desktop thread, passed in two CLI sessions, and a direct Fireworks probe reproduced
-the exact rejection. The warning covers the whole Kimi family, including pinned ids. Use Kimi in the CLI,
-or DeepSeek/GLM in the desktop, until the app or Fireworks fixes it.
+referenced schema instead of the parent schema.` DeepSeek and GLM accept that shape. The warning covers the
+whole Kimi family, including pinned ids. Use Kimi in the CLI, or DeepSeek/GLM in the desktop.
 
 The helper keeps its own TOML writer. It preserves unrelated TOML and provider credentials, retains
 command-backed authentication, and writes private backups. It never writes the API key into `config.toml`.
@@ -77,8 +75,8 @@ Fireworks temporarily sets `web_search = "disabled"`, as its Responses endpoint 
 server-executed search tool. See the WebSearch MCP note below for the supported replacement.
 Non-GPT models default to `high`. Explicit efforts must be supported by the Fireworks model's metadata.
 Fireworks promotes `xhigh` into `max`, so `max` is the only way to select the deepest tier; `--effort xhigh`
-fails with the supported list. A 2026-09-18 probe of `deepseek-v4p1-flash` accepted `none`, `low`, `medium`,
-`high`, `xhigh`, and `max`, and rejected `minimal`, `ultra`, and `adaptive` (`adaptive` is MiniMax M3 only).
+fails with the supported list. For example, `deepseek-v4p1-flash` accepts `none`, `low`, `medium`, `high`,
+`xhigh`, and `max`, and rejects `minimal`, `ultra`, and `adaptive` (`adaptive` is MiniMax M3 only).
 The helper exposes `low`/`medium`/`high`/`max` for that model, matching the curated ladder.
 The desktop effort slider shows the catalog ladder intersected with the app's `enabled-reasoning-efforts`
 setting in `config.toml`; that setting already includes `max`. The app-server loads the catalog at startup,
@@ -89,8 +87,7 @@ rejects root integers above 2^53, and `[agents] max_concurrent_threads_per_sessi
 Route through this helper, or lower that value first.
 
 FireConnect must be installed at `~/.fireconnect/cli` or on `PATH`.
-`FIRECONNECT_BIN` overrides executable discovery. The helper uses only FireConnect's public CLI commands,
-so a FireConnect upgrade is unlikely to break it; report any integration error before switching.
+`FIRECONNECT_BIN` overrides executable discovery. The helper uses only FireConnect's public CLI commands. Report any integration error before switching.
 Generic model discovery reads `https://api.fireworks.ai/inference/v1/models` with the same Fireworks key.
 `FIREWORKS_MODELS_URL` overrides that endpoint and `FIREWORKS_RESPONSES_URL` overrides the validation
 endpoint; tests use both to serve local fixtures.

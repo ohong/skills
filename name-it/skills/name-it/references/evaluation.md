@@ -76,7 +76,7 @@ Grid: columns = name types (Descriptive, Invented, Experiential, Evocative); row
 
 The agent can't run these directly — equip the user with exact protocols:
 
-**8-second test** (don't skip, even under time pressure): black-and-white slide, big name, one-line description. Show for 8 seconds to 5–8 people per name (mix ideal customers and smart outsiders). Ask exactly: *"What do you expect from a company named ___?"* Record their first sentence verbatim — no paraphrasing, no helping. Afterward, ask them to recall all names; note stumbles and blanks. Compare impressions against the orientation feeling: if you marked Momentum and people say "feels expensive and fancy," reassess.
+**8-second test:** black-and-white slide, big name, one-line description. Show for 8 seconds to 5–8 people per name (mix ideal customers and smart outsiders). Ask exactly: *"What do you expect from a company named ___?"* Record their first sentence verbatim — no paraphrasing, no helping. Afterward, ask them to recall all names; note stumbles and blanks. Compare impressions against the orientation feeling: if you marked Momentum and people say "feels expensive and fancy," reassess.
 
 **Stack-rank polling**: rate each name 1–5, then rank all names most-to-least *interesting* (leave "interesting" undefined). Look for consistent top-3 finishers. **Polarization is a good sign — love/hate beats universal indifference.** Names everyone forgets get eliminated immediately.
 

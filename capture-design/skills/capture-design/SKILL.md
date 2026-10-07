@@ -12,7 +12,7 @@ Turn reference assets containing a "target design" into a permanent, importable 
 The user provides one or more of:
 
 - **Images / screenshots** — analyze qualitatively. Only state precise values (hex codes, px) you can actually sample or confidently infer; otherwise describe qualitatively ("warm gray plastic, roughly #9B968C–#A8A298").
-- **Live URLs** — you have browser and computer-use tools; use them fully. Open the link, traverse the landing page plus 3–5 primary pages/flows, click around the site or app, hover elements, open modals and forms, and take screenshots as you go (these become references). Where DevTools/computed styles are accessible, extract exact colors, font stacks, sizes, spacing, shadows, and transition timings. Interactive states define much of a system's character — do whatever it takes to deeply study the reference, not just read the first page.
+- **Live URLs** — use your browser and computer-use tools. Open the link, traverse the landing page plus 3–5 primary pages/flows, click around the site or app, hover elements, open modals and forms, and take screenshots as you go (these become references). Where DevTools/computed styles are accessible, extract exact colors, font stacks, sizes, spacing, shadows, and transition timings. Interactive states define much of a system's character, so study more than the first page.
 - **Other media** (video stills, PDFs, physical product photos, architecture) — extract what's visible; note the medium.
 
 Use available image-analysis tools to sample colors when practical. Do not add a dependency solely for this workflow without the user's approval.
@@ -28,7 +28,7 @@ Use available image-analysis tools to sample colors when practical. Do not add a
 
 3. **Name the design.** Give it a memorable, evocative name that captures the essence without referencing any trademarked product or company (e.g. "Digital Atheneum", "Tempelhof Air Traffic Control", "Arctic Dawn"). Non-commercial proper nouns — places, movements, historical references — are encouraged.
 
-4. **Write the design system document** to `{kebab-case-name}-design-system.md` at the project root. `references/output-template.md` (read it before writing) lists candidate sections — treat them as suggestions, not must-haves. What belongs in the doc is dictated entirely by what the references contain. A web app needs interactive states, UI patterns, and motion; architecture photos need siting, massing, and materials instead — and would skip elevation-as-shadows, interactive states, and motion entirely. Invent sections the input demands that the template never anticipated.
+4. **Write the design system document** to `{kebab-case-name}-design-system.md` at the project root. `references/output-template.md` (read it before writing) lists candidate sections. What belongs in the doc depends on what the references contain. A web app needs interactive states, UI patterns, and motion; architecture photos need siting, massing, and materials instead — and would skip elevation-as-shadows, interactive states, and motion entirely. Invent sections the input demands that the template never anticipated.
 
 5. **Create the Bear note** (if a Bear connector is available — otherwise skip silently and mention the skip in your summary). The note is simply a copy of the design system .md, titled `Design inspo: {Name}`, with `#startup/design #swipefiles` on the line after the title for retrieval. The Bear API cannot attach images; end the note with a `## Reference images` section describing each reference and where it lives, so the user can drag images in manually.
 
@@ -42,7 +42,7 @@ Reference assets often come from real products. The *output* (doc, Bear note, de
 
 The exemplar for the *writing* is the Sea Ranch Lodge Design Manual: prose where every guideline flows from a stated philosophy of place, so a reader absorbs the worldview and can extrapolate correctly to situations the manual never covers. Aim for that register, compressed to a couple of pages — the key pillars of the design, sufficient for later recreation and application.
 
-Good design system documentation (per current practice) covers typography, color, spacing, iconography, and UI patterns with clear usage guidance — not just what the elements are, but when and how to use them, including states and accessibility characteristics where the medium has them. Apply this expectation proportionally to what the references actually show.
+Cover typography, color, spacing, iconography, and UI patterns as far as the references show them. Give usage guidance (when and how to use each element, plus states and accessibility characteristics where the medium has them), not only what the elements are.
 
 The difference between a useful capture and a mood-board caption is specificity plus interpretation:
 

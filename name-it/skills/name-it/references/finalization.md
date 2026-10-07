@@ -10,7 +10,7 @@ A trademark isn't owning a word — it's the exclusive right to use it for speci
 Process: quick knock-out search on TMView (filter by class and jurisdiction) yourself; after settling on a final candidate, hire counsel for a comprehensive federal/state/common-law search yielding a Green (clear) / Yellow (some risk) / Red (high conflict) opinion. Then decide whether the name's strength outweighs the risk.
 
 ### Domain strategy (§4.3.2 + A.4, PDF pp. 24–25, 39)
-The exact .com is nice, not essential — Placek calls it "just an area code," and Square ran on squareup.com for years while square.com belonged to Square Enix. **Never sacrifice seed capital for domain purity, and never let domain availability drive the name choice.** Premium domains run six to seven figures through opaque brokers; a decent negotiated purchase is often $15–30K if you want it later.
+The exact .com is nice, not essential — Placek calls it "just an area code," and Square ran on squareup.com for years while square.com belonged to Square Enix. Domain availability never drives the name choice, and domain purity isn't worth seed capital. Premium domains run six to seven figures through opaque brokers; a decent negotiated purchase is often $15–30K if you want it later.
 
 Unlock ladder (try in order):
 1. **Exact match, alternate TLD** — .net (underrated: early-internet credentials, affordable), .ai, .dev, .io. Prefer specific TLDs over .co, which reads as a .com fallback.

@@ -81,14 +81,14 @@ On some macOS builds, the old `airport` command is unavailable and SSIDs may be 
 
 ## Router or Public-Network Findings
 
-When the evidence points outside the Mac, stop pretending local tweaks will fix it. Give the user the exact router/AP actions that match the evidence:
+When the evidence points outside the Mac, local tweaks won't fix it. Give the user the router/AP actions that match the evidence:
 
 - For home routers: change 5 GHz channel, prefer 80/160 MHz if stable, enable Wi-Fi 6/6 GHz when available, reboot the AP, disable overloaded QoS, or test Ethernet.
 - For double NAT: identify both private hops and suggest testing directly behind the upstream router.
 - For public Wi-Fi: recommend moving closer to a different AP, switching to cellular/tethering, trying a different official SSID, or waiting; public networks can be per-client shaped.
 - For VPN: test with and without VPN only when the route or process evidence shows VPN involvement.
 
-Be concrete and measurement-led. A good final answer includes the current SSID/network evidence, link rate/channel, first-hop latency, speed result, change attempted, and next best action.
+The final answer includes the current SSID/network evidence, link rate/channel, first-hop latency, speed result, change attempted, and next best action.
 
 ## Helper Script
 
