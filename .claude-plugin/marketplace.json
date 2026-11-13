@@ -4,29 +4,24 @@
     "name": "Oscar Hong"
   },
   "metadata": {
-    "description": "Reusable Claude Code skills from ohong/agent-skills"
+    "description": "General productivity, research, and creative skills from ohong/skills"
   },
   "plugins": [
     {
-      "name": "audit-and-improve",
-      "source": "./audit-and-improve",
-      "description": "Evidence-based repository audit and prioritized improvement plan.",
-      "version": "0.1.1",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
-      "license": "MIT",
-      "keywords": ["audit", "code-review", "tech-debt"],
-      "category": "workflow"
-    },
-    {
       "name": "capture-design",
-      "source": "./capture-design",
-      "description": "Save reference visuals as a reusable design-system swipefile.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "description": "Capture an aesthetic or extract a design system from URLs and screenshots for reuse.",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["design", "swipefile", "references"],
+      "source": "./capture-design",
+      "keywords": [
+        "design",
+        "swipefile",
+        "references"
+      ],
       "category": "design"
     },
     {
@@ -34,10 +29,17 @@
       "source": "./distill-taste",
       "description": "Distill a person's publicly shared taste into an ask-<person> advisor skill.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["taste", "persona", "feedback", "research"],
+      "keywords": [
+        "taste",
+        "persona",
+        "feedback",
+        "research"
+      ],
       "category": "workflow"
     },
     {
@@ -45,10 +47,16 @@
       "source": "./fast-wifi",
       "description": "Diagnose macOS Wi-Fi and internet problems with measured checks.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["macos", "wifi", "networking"],
+      "keywords": [
+        "macos",
+        "wifi",
+        "networking"
+      ],
       "category": "utilities"
     },
     {
@@ -56,32 +64,34 @@
       "source": "./fieldtheory-research",
       "description": "Search, export, and analyze local X bookmarks with preserved provenance.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["x", "bookmarks", "research", "fieldtheory"],
+      "keywords": [
+        "x",
+        "bookmarks",
+        "research",
+        "fieldtheory"
+      ],
       "category": "productivity"
-    },
-    {
-      "name": "mission",
-      "source": "./mission",
-      "description": "File-backed milestone planning and execution for long-horizon work.",
-      "version": "0.1.1",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
-      "license": "MIT",
-      "keywords": ["planning", "milestones", "execution"],
-      "category": "workflow"
     },
     {
       "name": "name-it",
       "source": "./name-it",
       "description": "Run a structured brand or product naming and validation process.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["naming", "branding", "validation"],
+      "keywords": [
+        "naming",
+        "branding",
+        "validation"
+      ],
       "category": "productivity"
     },
     {
@@ -89,32 +99,33 @@
       "source": "./post-walk",
       "description": "Turn an Apple Voice Memo into project notes, tasks, todos, and drafts.",
       "version": "0.1.1",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["voice-memo", "transcription", "tasks"],
+      "keywords": [
+        "voice-memo",
+        "transcription",
+        "tasks"
+      ],
       "category": "productivity"
-    },
-    {
-      "name": "repo-now",
-      "source": "./repo-now",
-      "description": "Produce a read-only briefing on a repository's current state and next actions.",
-      "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
-      "license": "MIT",
-      "keywords": ["git", "status", "planning", "orientation"],
-      "category": "workflow"
     },
     {
       "name": "save2md",
       "source": "./save2md",
       "description": "Save articles, X posts, and YouTube transcripts as local Markdown.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["markdown", "archive", "transcript"],
+      "keywords": [
+        "markdown",
+        "archive",
+        "transcript"
+      ],
       "category": "productivity"
     },
     {
@@ -122,22 +133,17 @@
       "source": "./search-x",
       "description": "Find a remembered X post from fuzzy clues and verify it live.",
       "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
+      "author": {
+        "name": "Oscar Hong"
+      },
+      "repository": "https://github.com/ohong/skills",
       "license": "MIT",
-      "keywords": ["x", "twitter", "search"],
+      "keywords": [
+        "x",
+        "twitter",
+        "search"
+      ],
       "category": "productivity"
-    },
-    {
-      "name": "sync-well",
-      "source": "./sync-well",
-      "description": "Safely inspect and reconcile local Git work with its upstream.",
-      "version": "0.1.0",
-      "author": { "name": "Oscar Hong" },
-      "repository": "https://github.com/ohong/agent-skills",
-      "license": "MIT",
-      "keywords": ["git", "sync", "branches", "merge"],
-      "category": "workflow"
     }
   ]
 }

@@ -2,6 +2,8 @@
 
 Save a YouTube transcript as a local Markdown file through `https://www.usetranscribe.io`. The service only accepts YouTube URLs; never submit Spotify, Apple Podcasts, RSS, or generic podcast URLs directly.
 
+Read the current [service guide](https://www.usetranscribe.io/AGENTS.md) before calling the service. Link it and the hosted transcript permalink in the handoff.
+
 ## Workflow
 
 1. Identify the YouTube URL.

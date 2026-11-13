@@ -1,0 +1,643 @@
+{
+  "frames": [
+    {
+      "path": "frames/frame-001.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.5,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.5,
+      "timestamp": "00:12.500",
+      "timestamp_seconds": 12.5
+    },
+    {
+      "path": "frames/frame-002.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.583333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.583333333333334,
+      "timestamp": "00:12.583",
+      "timestamp_seconds": 12.583333333333334
+    },
+    {
+      "path": "frames/frame-003.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.666666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.666666666666666,
+      "timestamp": "00:12.667",
+      "timestamp_seconds": 12.666666666666666
+    },
+    {
+      "path": "frames/frame-004.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.75,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.75,
+      "timestamp": "00:12.750",
+      "timestamp_seconds": 12.75
+    },
+    {
+      "path": "frames/frame-005.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.833333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.833333333333334,
+      "timestamp": "00:12.833",
+      "timestamp_seconds": 12.833333333333334
+    },
+    {
+      "path": "frames/frame-006.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 12.916666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 12.916666666666666,
+      "timestamp": "00:12.917",
+      "timestamp_seconds": 12.916666666666666
+    },
+    {
+      "path": "frames/frame-007.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.0,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.0,
+      "timestamp": "00:13.000",
+      "timestamp_seconds": 13.0
+    },
+    {
+      "path": "frames/frame-008.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.083333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.083333333333334,
+      "timestamp": "00:13.083",
+      "timestamp_seconds": 13.083333333333334
+    },
+    {
+      "path": "frames/frame-009.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.166666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.166666666666666,
+      "timestamp": "00:13.167",
+      "timestamp_seconds": 13.166666666666666
+    },
+    {
+      "path": "frames/frame-010.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.25,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.25,
+      "timestamp": "00:13.250",
+      "timestamp_seconds": 13.25
+    },
+    {
+      "path": "frames/frame-011.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.333333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.333333333333334,
+      "timestamp": "00:13.333",
+      "timestamp_seconds": 13.333333333333334
+    },
+    {
+      "path": "frames/frame-012.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.416666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.416666666666666,
+      "timestamp": "00:13.417",
+      "timestamp_seconds": 13.416666666666666
+    },
+    {
+      "path": "frames/frame-013.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.5,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.5,
+      "timestamp": "00:13.500",
+      "timestamp_seconds": 13.5
+    },
+    {
+      "path": "frames/frame-014.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.583333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.583333333333334,
+      "timestamp": "00:13.583",
+      "timestamp_seconds": 13.583333333333334
+    },
+    {
+      "path": "frames/frame-015.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.666666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.666666666666666,
+      "timestamp": "00:13.667",
+      "timestamp_seconds": 13.666666666666666
+    },
+    {
+      "path": "frames/frame-016.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.75,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.75,
+      "timestamp": "00:13.750",
+      "timestamp_seconds": 13.75
+    },
+    {
+      "path": "frames/frame-017.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.833333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.833333333333334,
+      "timestamp": "00:13.833",
+      "timestamp_seconds": 13.833333333333334
+    },
+    {
+      "path": "frames/frame-018.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 13.916666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 13.916666666666666,
+      "timestamp": "00:13.917",
+      "timestamp_seconds": 13.916666666666666
+    },
+    {
+      "path": "frames/frame-019.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.0,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.0,
+      "timestamp": "00:14.000",
+      "timestamp_seconds": 14.0
+    },
+    {
+      "path": "frames/frame-020.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.083333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.083333333333334,
+      "timestamp": "00:14.083",
+      "timestamp_seconds": 14.083333333333334
+    },
+    {
+      "path": "frames/frame-021.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.166666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.166666666666666,
+      "timestamp": "00:14.167",
+      "timestamp_seconds": 14.166666666666666
+    },
+    {
+      "path": "frames/frame-022.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.25,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.25,
+      "timestamp": "00:14.250",
+      "timestamp_seconds": 14.25
+    },
+    {
+      "path": "frames/frame-023.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.333333333333334,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.333333333333334,
+      "timestamp": "00:14.333",
+      "timestamp_seconds": 14.333333333333334
+    },
+    {
+      "path": "frames/frame-024.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.416666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.416666666666666,
+      "timestamp": "00:14.417",
+      "timestamp_seconds": 14.416666666666666
+    },
+    {
+      "path": "frames/frame-025.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.5,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.5,
+      "timestamp": "00:14.500",
+      "timestamp_seconds": 14.5
+    },
+    {
+      "path": "frames/frame-026.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.583333333333332,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.583333333333332,
+      "timestamp": "00:14.583",
+      "timestamp_seconds": 14.583333333333332
+    },
+    {
+      "path": "frames/frame-027.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.666666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.666666666666666,
+      "timestamp": "00:14.667",
+      "timestamp_seconds": 14.666666666666666
+    },
+    {
+      "path": "frames/frame-028.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.75,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.75,
+      "timestamp": "00:14.750",
+      "timestamp_seconds": 14.75
+    },
+    {
+      "path": "frames/frame-029.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.833333333333332,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.833333333333332,
+      "timestamp": "00:14.833",
+      "timestamp_seconds": 14.833333333333332
+    },
+    {
+      "path": "frames/frame-030.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 14.916666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 14.916666666666666,
+      "timestamp": "00:14.917",
+      "timestamp_seconds": 14.916666666666666
+    },
+    {
+      "path": "frames/frame-031.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.0,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.0,
+      "timestamp": "00:15.000",
+      "timestamp_seconds": 15.0
+    },
+    {
+      "path": "frames/frame-032.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.083333333333332,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.083333333333332,
+      "timestamp": "00:15.083",
+      "timestamp_seconds": 15.083333333333332
+    },
+    {
+      "path": "frames/frame-033.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.166666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.166666666666666,
+      "timestamp": "00:15.167",
+      "timestamp_seconds": 15.166666666666666
+    },
+    {
+      "path": "frames/frame-034.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.25,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.25,
+      "timestamp": "00:15.250",
+      "timestamp_seconds": 15.25
+    },
+    {
+      "path": "frames/frame-035.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.333333333333332,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.333333333333332,
+      "timestamp": "00:15.333",
+      "timestamp_seconds": 15.333333333333332
+    },
+    {
+      "path": "frames/frame-036.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.416666666666666,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.416666666666666,
+      "timestamp": "00:15.417",
+      "timestamp_seconds": 15.416666666666666
+    },
+    {
+      "path": "frames/frame-037.png",
+      "reasons": [
+        "dense"
+      ],
+      "requests": [
+        {
+          "reason": "dense",
+          "requested_timestamp_seconds": 15.5,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 15.5,
+      "timestamp": "00:15.500",
+      "timestamp_seconds": 15.5
+    }
+  ],
+  "generated_at": "2026-09-07T03:50:03.290322+00:00",
+  "limitations": [
+    "Frames are discrete timestamp samples, not full-speed motion playback.",
+    "The contact sheet does not represent audio; listen to the source or extracted WAV.",
+    "Frames record requested positions separately from seek timestamps; non-endpoint seeks may quantize to nearby source frames.",
+    "The endpoint seek timestamp comes from ffprobe's last reported decodable frame PTS."
+  ],
+  "media_summary": {
+    "audio_codec": "aac",
+    "audio_duration_seconds": 41.898667,
+    "audio_present": true,
+    "average_fps": 25.0,
+    "container_duration_seconds": 41.898667,
+    "duration_seconds": 41.84,
+    "height": 1080,
+    "video_codec": "h264",
+    "video_duration_seconds": 41.84,
+    "width": 1920
+  },
+  "outputs": {
+    "audio": null,
+    "contact_sheet": "/Users/ohong/Movies/motion-video-lab/2026-09-06-reference-2096648879219617792/reference-camera/contact-sheet.jpg",
+    "inventory": "/Users/ohong/Movies/motion-video-lab/2026-09-06-reference-2096648879219617792/reference-camera/inventory.json"
+  },
+  "sampling": {
+    "dense_range_seconds": [
+      12.5,
+      15.5
+    ],
+    "dense_sample_fps": 12.0,
+    "endpoint": {
+      "endpoint_seek_preroll_seconds": 1.9999999523179213e-07,
+      "endpoint_seek_time_seconds": 41.7999998,
+      "gap_from_video_duration_seconds": 0.04000000000000625,
+      "last_decodable_frame_pts_seconds": 41.8,
+      "last_decodable_frame_time_seconds": 41.8,
+      "method": "ffprobe tail show_frames",
+      "stream_start_time_seconds": 0.0,
+      "stream_time_base_seconds": 4e-07,
+      "video_duration_seconds": 41.84
+    },
+    "explicit_times_seconds": [],
+    "overview_samples_requested": 0,
+    "unique_frames_extracted": 37
+  },
+  "schema_version": 1,
+  "source": "/Users/ohong/Downloads/Video 2096648879219617792.mp4"
+}

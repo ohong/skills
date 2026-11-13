@@ -1,0 +1,71 @@
+{
+  "_readme": "Data for scripts/fal_run.py cost estimates. Keys are endpoint ids or glob patterns (longest matching pattern wins). usd is the default rate; variants override it when every field in 'when' equals the input value. unit is per_second (input duration), per_image (input num_images, default 1) or per_1k_chars (input prompt length). usd null means unknown: pass --est-usd. estimate true means the rate is a guess.",
+  "openai/gpt-image-2.5/sunburst/text-to-image": {
+    "unit": "per_image", "usd": 0.10, "estimate": true,
+    "variants": [
+      {"when": {"quality": "low"}, "usd": 0.00588},
+      {"when": {"quality": "max"}, "usd": 0.21072}
+    ],
+    "note": "low and max are published; the default (high) rate is an estimate.",
+    "verified": "2026-09-29"
+  },
+  "openai/gpt-image-2.5/sunburst/edit": {
+    "unit": "per_image", "usd": 0.10, "estimate": true,
+    "variants": [
+      {"when": {"quality": "low"}, "usd": 0.00588},
+      {"when": {"quality": "max"}, "usd": 0.21072}
+    ],
+    "note": "low and max are published; the default (high) rate is an estimate.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/veo3.1": {
+    "unit": "per_second", "usd": 0.40,
+    "variants": [{"when": {"generate_audio": false}, "usd": 0.20}],
+    "note": "0.40 with audio (default), 0.20 without.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/veo3.1/*": {
+    "unit": "per_second", "usd": 0.40,
+    "variants": [{"when": {"generate_audio": false}, "usd": 0.20}],
+    "note": "image-to-video, first-last-frame-to-video, reference-to-video. 0.40 with audio (default), 0.20 without.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/veo3.1/fast": {
+    "unit": "per_second", "usd": 0.15,
+    "variants": [{"when": {"generate_audio": false}, "usd": 0.10}],
+    "note": "0.15 with audio (default), 0.10 without.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/veo3.1/fast/*": {
+    "unit": "per_second", "usd": 0.15,
+    "variants": [{"when": {"generate_audio": false}, "usd": 0.10}],
+    "note": "0.15 with audio (default), 0.10 without.",
+    "verified": "2026-09-29"
+  },
+  "bytedance/seedance-2.5/*": {
+    "unit": "per_second", "usd": 0.47,
+    "variants": [{"when": {"resolution": "480p"}, "usd": 0.22}],
+    "note": "0.47 at 720p (default), 0.22 at 480p.",
+    "verified": "2026-09-29"
+  },
+  "google/gemini-3.8-flash-tts": {
+    "unit": "per_1k_chars", "usd": 0.045,
+    "note": "billed per 1000 characters of prompt.",
+    "verified": "2026-09-29"
+  },
+  "google/gemini-3.8-flash-lite-tts": {
+    "unit": "per_1k_chars", "usd": 0.045, "estimate": true,
+    "note": "rate assumed equal to the flash TTS rate; check fal.ai pricing.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/elevenlabs/speech-to-text/scribe-v2": {
+    "unit": "per_minute", "usd": null,
+    "note": "unknown; keyterms add a 30 percent premium. Pass --est-usd.",
+    "verified": "2026-09-29"
+  },
+  "fal-ai/elevenlabs/music": {
+    "unit": "unknown", "usd": null,
+    "note": "unknown. Pass --est-usd.",
+    "verified": "2026-09-29"
+  }
+}

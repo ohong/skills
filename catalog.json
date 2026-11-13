@@ -1,0 +1,125 @@
+{
+  "repository": "ohong/skills",
+  "skills": [
+    {
+      "name": "ask-lulu",
+      "path": "ask-lulu/skills/ask-lulu",
+      "description": "Chat with a research-grounded model of Lulu Cheng Meservey for candid communications advice or work review. Use for \"/ask-lulu\", \"what would Lulu think of...\", \"run this through Lulu\", \"Lulu's take on...\", or requests to review a memo, founder communication, company narrative, project manifesto, or announcement through her perspective.",
+      "installation": "symlink"
+    },
+    {
+      "name": "capture-design",
+      "path": "capture-design/skills/capture-design",
+      "description": "Save reference visuals as a reusable design-system swipefile. Use for capturing an aesthetic, extracting a design system from a URL or screenshots, or a requested design teardown for reuse.",
+      "installation": "symlink"
+    },
+    {
+      "name": "daily-close",
+      "path": "daily-close",
+      "description": "Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. Use for \"$daily-close\", \"close my day\", or a requested daily work recap.",
+      "installation": "symlink"
+    },
+    {
+      "name": "demo-video",
+      "path": "demo-video",
+      "description": "Create a narrated MP4 demo from browser screenshots, low-cost fal.ai text-to-speech, and ffmpeg. Use for still-image product walkthroughs synchronized to narration.",
+      "installation": "symlink"
+    },
+    {
+      "name": "distill-taste",
+      "path": "distill-taste/skills/distill-taste",
+      "description": "Deep-research a named person's (or group of people's) public writing, interviews, and talks, then distill their taste into a standalone installable ask-person advisor skill. Use for \"/distill-taste name\", \"make a skill from a person's taste\", \"I want feedback from a person's perspective\", or refreshing an existing ask-* persona. Not for applying an already-installed ask-* skill, and not for private individuals with no public footprint.",
+      "installation": "symlink"
+    },
+    {
+      "name": "draft-zero",
+      "path": "draft-zero",
+      "description": "Kick off a writing session for a new essay by interviewing Oscar in structured question rounds until there's enough material for a rough outline \u2014 including verbatim sentences worth keeping for the first draft. Use whenever Oscar starts a writing session, says \"/draft-zero\", \"let's write\", \"pick a topic\", \"help me start an essay\", mentions writer's block or a blank page, or names an essay idea he wants to develop. The whole point is to beat blank-page paralysis: end every session with something on the page.",
+      "installation": "symlink"
+    },
+    {
+      "name": "fast-wifi",
+      "path": "fast-wifi/skills/fast-wifi",
+      "description": "Diagnose a slow macOS network with the bundled measurement script. Use when the user asks to troubleshoot current Wi-Fi or internet performance.",
+      "installation": "symlink"
+    },
+    {
+      "name": "fieldtheory-research",
+      "path": "fieldtheory-research/skills/fieldtheory-research",
+      "description": "Search, sync, export, and analyze the user's local X bookmarks with the Field Theory CLI while preserving full post text and provenance. Use when the user mentions Field Theory, `ft`, X bookmarks, bookmark folders, remembered saved posts, chronological bookmark exports, or bookmark-grounded research. Do not use for live X search or archiving a single known URL.",
+      "installation": "symlink"
+    },
+    {
+      "name": "karasz-cover",
+      "path": "karasz-cover",
+      "description": "Create artistic illustrated covers for projects or ideas with imagegen, using the supplied Ilonka Karasz cover references. Use for /karasz-cover or requests for this decorative editorial style; ordinary image generation does not need this skill.",
+      "installation": "symlink"
+    },
+    {
+      "name": "motion-video",
+      "path": "motion-video",
+      "description": "Direct and produce finished videos end to end - product films from a deployed URL or codebase, narrated explainers, and generated or motion-graphics pieces - with a written script, emotive TTS narration, generated keyframes and shots, real Creative Commons footage, music, word-timed captions, and a critic pass. Use for /motion-video, teasers, launch films, demos, explainers, and walkthroughs. Not for a quick edit of one existing clip (use ffmpeg directly) or for still images.",
+      "installation": "symlink"
+    },
+    {
+      "name": "name-it",
+      "path": "name-it/skills/name-it",
+      "description": "Run a structured brand or product naming and validation process. Use for explicit naming strategy or candidate evaluation, not ordinary code identifiers.",
+      "installation": "symlink"
+    },
+    {
+      "name": "no-ai-slop",
+      "path": "no-ai-slop",
+      "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.",
+      "installation": "symlink"
+    },
+    {
+      "name": "post-walk",
+      "path": "post-walk/skills/post-walk",
+      "description": "Process a local Apple Voice Memo into an archived transcript, project notes, tasks, todos, and drafts. Use only when explicitly asked to process a walk or commute memo.",
+      "installation": "symlink"
+    },
+    {
+      "name": "quarterly-derisk-exercise",
+      "path": "quarterly-derisk-exercise",
+      "description": "Ask Oscar the \"5 questions to de-risk life\" exercise, once a quarter.",
+      "installation": "symlink"
+    },
+    {
+      "name": "save2md",
+      "path": "save2md/skills/save2md",
+      "description": "Save articles, X posts or threads, and YouTube transcripts as local Markdown with bundled tools. Use when the user asks to save or archive a URL as Markdown, including paywalled articles.",
+      "installation": "symlink"
+    },
+    {
+      "name": "search-x",
+      "path": "search-x/skills/search-x",
+      "description": "Find a specific remembered X post from fuzzy clues and verify it on the live post. Use when exact wording or the author is unknown.",
+      "installation": "symlink"
+    },
+    {
+      "name": "spring-cleaning",
+      "path": "spring-cleaning",
+      "description": "Inspect Mac disk use, identify recoverable space, and carry out scoped cleanup with verification. Use for low-storage or disk-cleanup requests; keep requests for plans or explanations read-only.",
+      "installation": "symlink"
+    },
+    {
+      "name": "transcribe-youtube",
+      "path": "transcribe-youtube",
+      "description": "Transcribe a YouTube video through usetranscribe.io and save timestamped Markdown. Use for YouTube transcription or transcript-based summaries and follow-up questions.",
+      "installation": "symlink"
+    },
+    {
+      "name": "video-analysis",
+      "path": "video-analysis",
+      "description": "Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. Use when the user supplies a video file or asks you to inspect one on your computer.",
+      "installation": "symlink"
+    },
+    {
+      "name": "writing-with-smart-brevity",
+      "path": "writing-with-smart-brevity",
+      "description": "Rewrites long-winded, padded or AI-sounding text into Smart Brevity style (Axios / VandeHei, Allen & Schwartz) - main point first, why it matters, ranked support, clear next step - without losing facts, caveats or warmth. Use when the user asks to tighten, shorten, edit, punch up or \"make concise\" an email, memo, update, announcement, Slack post, summary or doc, mentions Smart Brevity or Axios style, or complains that writing is too long, rambling, buried, or sounds like AI slop.",
+      "installation": "symlink"
+    }
+  ]
+}

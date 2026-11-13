@@ -1,68 +1,66 @@
-# ohong-skills
+# skills
 
-Reusable Claude Code plugins and Codex skills that add scripts, external retrieval, or durable specialist workflows.
+My reusable skills for productivity, research, writing, creative work, and agent tools.
+Software engineering and software factory workflows live in [ohong/ostack](https://github.com/ohong/ostack).
+Project-specific skills stay with their projects. Installed upstream skills remain maintained by their original authors.
 
-## Claude Code
+## Install
 
-Add the marketplace, then install the plugins you want:
+Clone this repo to `~/dev/skills`, then link its standalone skills into the global agent directories:
+
+```sh
+python3 scripts/link-skills.py --dry-run
+python3 scripts/link-skills.py
+```
+
+The installer links `~/.agents/skills` and `~/.claude/skills` to these sources. Codex discovers the shared `.agents` directory.
+Existing installations are preserved; conflicts stop before any links are created.
+Use `--agents codex` if you need the older Codex-specific directory.
+
+Link selected skills into a project:
+
+```sh
+python3 scripts/link-skills.py --target ~/dev/my-project --only save2md,search-x
+```
+
+The project stores symlinks, not copies. Update the canonical source here.
+A local symlink requires this checkout on that machine; it is not a portable vendored installation.
+
+For Claude marketplace plugins:
 
 ```text
-/plugin marketplace add ohong/agent-skills
+/plugin marketplace add ohong/skills
 /plugin install save2md@ohong-skills
 ```
 
-## Marketplace plugins
+Restart the agent or start a fresh chat after changing installations.
+See [MAINTENANCE.md](MAINTENANCE.md) for source ownership and migration details.
 
-| Plugin | Description |
+Personal skills stay local and ignored. Reinstall them with `python3 scripts/link-skills.py --include-local`.
+
+Retired support files are preserved under `resources/retired/`; they are excluded from skill discovery.
+
+## Skills
+
+| Skill | Purpose |
 |---|---|
-| [audit-and-improve](audit-and-improve/) | Audits a repository and produces a prioritized improvement plan. |
-| [capture-design](capture-design/) | Saves reference visuals as a reusable design-system swipefile. |
-| [distill-taste](distill-taste/) | Distills a person's publicly shared taste into an ask-* advisor skill. |
-| [fast-wifi](fast-wifi/) | Diagnoses macOS Wi-Fi and internet problems with measured checks. |
-| [fieldtheory-research](fieldtheory-research/) | Searches, exports, and analyzes local X bookmarks with preserved provenance. |
-| [mission](mission/) | Runs file-backed milestone planning and execution for long-horizon work. |
-| [name-it](name-it/) | Runs a structured brand or product naming and validation process. |
-| [post-walk](post-walk/) | Turns an Apple Voice Memo into project notes, tasks, todos, and drafts. |
-| [repo-now](repo-now/) | Produces a read-only briefing on a repository's current state and next actions. |
-| [save2md](save2md/) | Saves articles, X posts, and YouTube transcripts as local Markdown. |
-| [search-x](search-x/) | Finds a remembered X post from fuzzy clues and verifies it live. |
-| [sync-well](sync-well/) | Safely inspects and reconciles local Git work with its upstream. |
-
-## Standalone skills
-
-| Skill | Description |
-|---|---|
-| [architect](architect/) | Compares architecture designs and prototypes uncertain claims before implementation. |
-| [ask-lulu](ask-lulu/skills/ask-lulu/) | Gives communications advice and work reviews through a research-grounded model of Lulu Cheng Meservey. |
-| [benchmark-checklist](benchmark-checklist/) | Validates performance measurements and user-visible impact. |
-| [correct](correct/) | Finds repeated agent mistakes in history and fixes the repository environment that enables them. |
-| [create-mascot](create-mascot/skills/create-mascot/) | Designs an original product mascot and builds it as an editable, animatable Blender asset. |
-| [delegate](delegate/) | Hands a ready plan to Codex workers to implement while Claude specs and reviews. |
-| [explain](explain/) | Explains what an agent did in a session: changes, reasons, evidence of completion, and what remains. |
-| [explainer-video](explainer-video/) | Creates narrated videos for codebases, subsystems, and PR changes with Manim, fast speech, and ffmpeg. |
-| [figure-it-out](figure-it-out/) | Designs and executes evidence-backed workflows for substantial migrations. |
-| [how](how/) | Explains how a codebase, subsystem, or user flow works by tracing its implementation; critiques only on request. |
-| [interrogate](interrogate/) | Challenges designs and diffs for correctness, scope, performance, and maintainability without applying fixes. |
-| [pls-fix](pls-fix/) | Revives paused projects through fresh assessment, implementation, design improvement, and real user-flow verification. |
-| [poteto-mode](poteto-mode/) | Coordinates portable engineering playbooks with explicit planning and delivery gates. |
-| [press-release-faq](press-release-faq/) | Writes an Amazon-style Working Backwards PR/FAQ grounded in the current project. |
-| [recall](recall/) | Recovers relevant project history and verifies its current state. |
-| [show-me-your-work](show-me-your-work/) | Keeps a concise decision trail backed by inspectable artifacts. |
-| [skill-authoring](skill-authoring/) | Keeps new and edited skills, commands, and agent definitions thin, deterministic, and progressively disclosed. |
-| [spring-cleaning](spring-cleaning/) | Inspects Mac disk use, then carries out scoped, verified cleanup (read-only when asked for a plan). |
-| [swarm](swarm/) | Coordinates authorized parallel workers with isolated scopes and verified coverage. |
-| [switch-model](switch-model/) | Switches Codex's default model and provider, lists Fireworks serverless models, or restores GPT and Grok. |
-| [take-notes](take-notes/) | Saves learnings, references, and full prompts from the current conversation as concise project notes. |
-| [transcribe-youtube](transcribe-youtube/) | Transcribes YouTube links through usetranscribe.io and saves timestamped Markdown. |
-| [vibe-security-audit](vibe-security-audit/) | Audits and fixes security holes in AI-built apps, especially Supabase and Firebase backends. |
-
-## Codex
-
-Each standalone plugin keeps its canonical skill under `skills/<name>/`. Copy or symlink that folder into a Codex skill directory:
-
-```bash
-mkdir -p ~/.agents/skills
-ln -s /path/to/agent-skills/save2md/skills/save2md ~/.agents/skills/save2md
-```
-
-Restart Claude Code or Codex, or start a fresh task, after installing or updating skills.
+| [ask-lulu](ask-lulu/skills/ask-lulu/) | Chat with a research-grounded model of Lulu Cheng Meservey for candid communications advice or work review. |
+| [capture-design](capture-design/skills/capture-design/) | Save reference visuals as a reusable design-system swipefile. |
+| [daily-close](daily-close/) | Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. |
+| [demo-video](demo-video/) | Create a narrated MP4 demo from browser screenshots, low-cost fal.ai text-to-speech, and ffmpeg. |
+| [distill-taste](distill-taste/skills/distill-taste/) | Deep-research a named person's (or group of people's) public writing, interviews, and talks, then distill their taste into a standalone installable ask-person advisor skill. |
+| [draft-zero](draft-zero/) | Interview the writer and turn an essay idea into a rough outline with their own words. |
+| [fast-wifi](fast-wifi/skills/fast-wifi/) | Diagnose a slow macOS network with the bundled measurement script. |
+| [fieldtheory-research](fieldtheory-research/skills/fieldtheory-research/) | Search, sync, export, and analyze the user's local X bookmarks with the Field Theory CLI while preserving full post text and provenance. |
+| [karasz-cover](karasz-cover/) | Create artistic illustrated covers for projects or ideas with imagegen, using the supplied Ilonka Karasz cover references. |
+| [motion-video](motion-video/) | Direct and produce finished videos end to end - product films from a deployed URL or codebase, narrated explainers, and generated or motion-graphics pieces - with a written script, emotive TTS narration, generated keyframes and shots, real Creative Commons footage, music, word-timed captions, and a critic pass. |
+| [name-it](name-it/skills/name-it/) | Run a structured brand or product naming and validation process. |
+| [no-ai-slop](no-ai-slop/) | Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. |
+| [post-walk](post-walk/skills/post-walk/) | Process a local Apple Voice Memo into an archived transcript, project notes, tasks, todos, and drafts. |
+| [quarterly-derisk-exercise](quarterly-derisk-exercise/) | Ask Oscar the "5 questions to de-risk life" exercise, once a quarter. |
+| [save2md](save2md/skills/save2md/) | Save articles, X posts or threads, and YouTube transcripts as local Markdown with bundled tools. |
+| [search-x](search-x/skills/search-x/) | Find a specific remembered X post from fuzzy clues and verify it on the live post. |
+| [spring-cleaning](spring-cleaning/) | Inspect Mac disk use, identify recoverable space, and carry out scoped cleanup with verification. |
+| [transcribe-youtube](transcribe-youtube/) | Transcribe a YouTube video through usetranscribe.io and save timestamped Markdown. |
+| [video-analysis](video-analysis/) | Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. |
+| [writing-with-smart-brevity](writing-with-smart-brevity/) | Rewrites long-winded, padded or AI-sounding text into Smart Brevity style (Axios / VandeHei, Allen & Schwartz) - main point first, why it matters, ranked support, clear next step - without losing facts, caveats or warmth. |

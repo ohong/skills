@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import html
 import json
 import re
@@ -503,15 +502,6 @@ def title_from_url(url: str) -> str:
     return re.sub(r"[-_]+", " ", slug).strip().title() or "Article Archive"
 
 
-def unique_output_dir(base: Path, slug: str) -> Path:
-    candidate = base / slug
-    index = 2
-    while candidate.exists() and any(candidate.iterdir()):
-        candidate = base / f"{slug}-{index}"
-        index += 1
-    return candidate
-
-
 def reader_url(url: str) -> str:
     return READER_PREFIX + url
 
@@ -521,10 +511,8 @@ def render_article(
     title: str,
     source_url: str,
     archive_url: str,
-    extraction_path: str,
     markdown: str,
     metadata: dict[str, str],
-    warnings: list[str],
 ) -> str:
     title = title.strip() or metadata.get("title") or title_from_url(source_url)
     body = markdown.strip()
@@ -539,8 +527,6 @@ def render_article(
         ("Archive", archive_url),
         ("Author", metadata.get("author", "")),
         ("Published", metadata.get("published", "")),
-        ("Extracted", dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()),
-        ("Extraction", extraction_path),
     ]
     for label, value in facts:
         if value:
@@ -548,11 +534,6 @@ def render_article(
     lines.append("")
     if body:
         lines.extend([body, ""])
-    if warnings:
-        lines.extend(["## Notes", ""])
-        for warning in dict.fromkeys(warnings):
-            lines.append(f"- {warning}")
-        lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -572,7 +553,8 @@ def main() -> int:
     parser.add_argument("url", help="Original article URL or archive.ph/archive.today snapshot URL")
     parser.add_argument("--archive-url", help="Known archive.ph/archive.today snapshot URL for the article")
     parser.add_argument("--html-file", help="Browser-saved HTML to extract instead of fetching")
-    parser.add_argument("--out-dir", help="Output directory; defaults to outputs/archive-article/<slug>")
+    parser.add_argument("--out-dir", help="Output directory; defaults to ~/Documents/Saved Articles/Web")
+    parser.add_argument("--debug", action="store_true", help="Keep extraction diagnostics beside the Markdown")
     parser.add_argument("--no-reader-fallback", action="store_true", help="Do not fall back to the text reader")
     parser.add_argument("--timeout", type=int, default=40, help="Fetch timeout in seconds")
     args = parser.parse_args()
@@ -589,9 +571,7 @@ def main() -> int:
     metadata: dict[str, str] = {}
     fetched: FetchResult | None = None
 
-    base = Path(args.out_dir).expanduser().resolve() if args.out_dir else Path.cwd() / "outputs" / "archive-article"
-    slug_source = source_url or archive_url or input_url
-    out_dir = base if args.out_dir else unique_output_dir(base, slugify(slug_source))
+    out_dir = Path(args.out_dir).expanduser().resolve() if args.out_dir else Path.home() / "Documents" / "Saved Articles" / "Web"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     try:
@@ -599,7 +579,8 @@ def main() -> int:
             html_path = Path(args.html_file).expanduser().resolve()
             markdown, metadata = extract_from_html_file(html_path, source_url or archive_url or input_url, warnings)
             extraction_path = f"browser-saved HTML: {html_path}"
-            (out_dir / "source.html").write_text(html_path.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
+            if args.debug:
+                (out_dir / "source.html").write_text(html_path.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
         else:
             for candidate in ([archive_url] if archive_url else archive_candidates(input_url)):
                 if not candidate:
@@ -607,7 +588,8 @@ def main() -> int:
                 archive_attempts.append(candidate)
                 fetched = fetch_url(candidate, timeout=args.timeout)
                 candidate_archive_url = fetched.final_url if is_archive_url(fetched.final_url) else candidate
-                (out_dir / "source.html").write_text(fetched.text, encoding="utf-8")
+                if args.debug:
+                    (out_dir / "source.html").write_text(fetched.text, encoding="utf-8")
                 if is_archive_challenge(fetched.text):
                     warnings.append(f"Archive source returned a security challenge: {candidate_archive_url}")
                     continue
@@ -626,7 +608,8 @@ def main() -> int:
             if not markdown and not args.no_reader_fallback:
                 fallback_target = source_url or input_url
                 fetched = fetch_url(reader_url(fallback_target), timeout=args.timeout)
-                (out_dir / "reader.md").write_text(fetched.text, encoding="utf-8")
+                if args.debug:
+                    (out_dir / "reader.md").write_text(fetched.text, encoding="utf-8")
                 reader_markdown, reader_meta = parse_reader_output(fetched.text, warnings)
                 if reader_markdown and not is_archive_challenge(reader_markdown):
                     markdown = reader_markdown
@@ -644,45 +627,48 @@ def main() -> int:
             title=title,
             source_url=source_url or metadata.get("source") or input_url,
             archive_url=archive_url if archive_verified or provided_archive_url else "",
-            extraction_path=extraction_path,
             markdown=markdown,
             metadata=metadata,
-            warnings=warnings,
         )
         article_path = out_dir / title_filename(title)
         article_path.write_text(article, encoding="utf-8")
-        write_json(
-            out_dir / "source.json",
-            {
-                "input_url": input_url,
-                "source_url": source_url or metadata.get("source") or input_url,
-                "archive_url": archive_url if archive_verified or provided_archive_url else "",
-                "attempted_archive_urls": archive_attempts,
-                "archive_verified": archive_verified,
-                "title": title,
-                "metadata": metadata,
-                "extraction_path": extraction_path,
-                "warnings": list(dict.fromkeys(warnings)),
-                "article_path": str(article_path),
-            },
-        )
+        if args.debug:
+            write_json(
+                out_dir / "source.json",
+                {
+                    "input_url": input_url,
+                    "source_url": source_url or metadata.get("source") or input_url,
+                    "archive_url": archive_url if archive_verified or provided_archive_url else "",
+                    "attempted_archive_urls": archive_attempts,
+                    "archive_verified": archive_verified,
+                    "title": title,
+                    "metadata": metadata,
+                    "extraction_path": extraction_path,
+                    "warnings": list(dict.fromkeys(warnings)),
+                    "article_path": str(article_path),
+                },
+            )
+        for warning in dict.fromkeys(warnings):
+            print(f"warning: {warning}", file=sys.stderr)
         print(article_path)
         return 0
     except Exception as exc:  # noqa: BLE001
-        write_json(
-            out_dir / "source.json",
-            {
-                "input_url": input_url,
-                "source_url": source_url or input_url,
-                "archive_url": archive_url if archive_verified or provided_archive_url else "",
-                "attempted_archive_urls": archive_attempts,
-                "archive_verified": archive_verified,
-                "error": str(exc),
-                "warnings": list(dict.fromkeys(warnings)),
-            },
-        )
+        if args.debug:
+            write_json(
+                out_dir / "source.json",
+                {
+                    "input_url": input_url,
+                    "source_url": source_url or input_url,
+                    "archive_url": archive_url if archive_verified or provided_archive_url else "",
+                    "attempted_archive_urls": archive_attempts,
+                    "archive_verified": archive_verified,
+                    "error": str(exc),
+                    "warnings": list(dict.fromkeys(warnings)),
+                },
+            )
         print(f"error: {exc}", file=sys.stderr)
-        print(f"diagnostics: {out_dir / 'source.json'}", file=sys.stderr)
+        if args.debug:
+            print(f"diagnostics: {out_dir / 'source.json'}", file=sys.stderr)
         return 1
 
 

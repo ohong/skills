@@ -1,0 +1,4 @@
+interface:
+  display_name: "Motion Video"
+  short_description: "Scripted, narrated, captioned films from plan to critic pass"
+  default_prompt: "Use $motion-video to make a {length} {aspect ratio} video about {subject}, in this style: {style}."

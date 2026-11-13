@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "description": "Diagnose macOS Wi-Fi and internet problems with measured checks.",
   "author": { "name": "Oscar Hong" },
-  "repository": "https://github.com/ohong/agent-skills",
+  "repository": "https://github.com/ohong/skills",
   "license": "MIT"
 }

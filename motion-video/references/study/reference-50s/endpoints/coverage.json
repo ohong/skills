@@ -1,0 +1,80 @@
+{
+  "frames": [
+    {
+      "path": "frames/frame-001.png",
+      "reasons": [
+        "overview"
+      ],
+      "requests": [
+        {
+          "reason": "overview",
+          "requested_timestamp_seconds": 0.0,
+          "selection": "requested_time"
+        }
+      ],
+      "seek_timestamp_seconds": 0.0,
+      "timestamp": "00:00.000",
+      "timestamp_seconds": 0.0
+    },
+    {
+      "path": "frames/frame-002.png",
+      "reasons": [
+        "overview"
+      ],
+      "requests": [
+        {
+          "reason": "overview",
+          "requested_timestamp_seconds": 49.8,
+          "selection": "last_decodable_frame"
+        }
+      ],
+      "seek_timestamp_seconds": 49.78333325,
+      "timestamp": "00:49.783",
+      "timestamp_seconds": 49.78333333333333
+    }
+  ],
+  "generated_at": "2026-09-04T21:31:40.413711+00:00",
+  "limitations": [
+    "Frames are discrete timestamp samples, not full-speed motion playback.",
+    "The contact sheet does not represent audio; listen to the source or extracted WAV.",
+    "Frames record requested positions separately from seek timestamps; non-endpoint seeks may quantize to nearby source frames.",
+    "The endpoint seek timestamp comes from ffprobe's last reported decodable frame PTS."
+  ],
+  "media_summary": {
+    "audio_codec": "aac",
+    "audio_duration_seconds": 49.856,
+    "audio_present": true,
+    "average_fps": 60.0,
+    "container_duration_seconds": 49.856,
+    "duration_seconds": 49.8,
+    "height": 1080,
+    "video_codec": "h264",
+    "video_duration_seconds": 49.8,
+    "width": 1920
+  },
+  "outputs": {
+    "audio": null,
+    "contact_sheet": "/private/tmp/motion-video-build/motion-video/references/study/reference-50s/endpoints/contact-sheet.jpg",
+    "inventory": "/private/tmp/motion-video-build/motion-video/references/study/reference-50s/endpoints/inventory.json"
+  },
+  "sampling": {
+    "dense_range_seconds": null,
+    "dense_sample_fps": null,
+    "endpoint": {
+      "endpoint_seek_preroll_seconds": 8.333333312293689e-08,
+      "endpoint_seek_time_seconds": 49.78333325,
+      "gap_from_video_duration_seconds": 0.01666666666666572,
+      "last_decodable_frame_pts_seconds": 49.78333333333333,
+      "last_decodable_frame_time_seconds": 49.78333333333333,
+      "method": "ffprobe tail show_frames",
+      "stream_start_time_seconds": 0.0,
+      "stream_time_base_seconds": 1.6666666666666668e-07,
+      "video_duration_seconds": 49.8
+    },
+    "explicit_times_seconds": [],
+    "overview_samples_requested": 2,
+    "unique_frames_extracted": 2
+  },
+  "schema_version": 1,
+  "source": "/private/tmp/motion-video-build/motion-video/references/videos/reference-50s.mp4"
+}

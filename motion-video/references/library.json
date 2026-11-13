@@ -1,0 +1,251 @@
+{
+  "created": "2026-09-04",
+  "source_directory": "/Users/ohong/dev/board-meeting/teaser-video/reference-videos",
+  "usage": "Private reference study, not cleared production footage",
+  "videos": [
+    {
+      "file": "videos/apple-style.mp4",
+      "sha256": "c84db6e7310a147f710d420990f916097567089e777a68535b499f33f27fb105",
+      "bytes": 5549724,
+      "container_duration_seconds": 22.105397,
+      "video_duration_seconds": 22.067875,
+      "width": 3840,
+      "height": 2160,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/apple-style/dense-sheet.jpg",
+        "study/apple-style/endpoints/contact-sheet.jpg",
+        "study/apple-style/sheet-01.jpg",
+        "study/apple-style/sheet-02.jpg"
+      ],
+      "endpoint_coverage": "study/apple-style/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/motion-agent.mp4",
+      "sha256": "74048732cbf8349ac082262319ae024ef332b4517f9ca2287ff1e761db93a9e6",
+      "bytes": 10639963,
+      "container_duration_seconds": 124.458957,
+      "video_duration_seconds": 124.266,
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/motion-agent/dense-sheet.jpg",
+        "study/motion-agent/endpoints/contact-sheet.jpg",
+        "study/motion-agent/sheet-01.jpg",
+        "study/motion-agent/sheet-02.jpg",
+        "study/motion-agent/sheet-03.jpg",
+        "study/motion-agent/sheet-04.jpg"
+      ],
+      "endpoint_coverage": "study/motion-agent/endpoints/coverage.json",
+      "narration_study": "study/motion-agent/narration.md"
+    },
+    {
+      "file": "videos/quick-teaser.mp4",
+      "sha256": "2494f4400b36ead3795aba189facb160cf2fcb7c0b97eaa46b32ebe65bad100c",
+      "bytes": 6079393,
+      "container_duration_seconds": 10.090667,
+      "video_duration_seconds": 10.066987,
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/quick-teaser/dense-sheet.jpg",
+        "study/quick-teaser/endpoints/contact-sheet.jpg",
+        "study/quick-teaser/sheet-01.jpg"
+      ],
+      "endpoint_coverage": "study/quick-teaser/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-10s.mp4",
+      "sha256": "944fe9ab596d1ec68b78f42a7cda5f6da40be4602979189cd942bc38665f3921",
+      "bytes": 4902917,
+      "container_duration_seconds": 9.958333,
+      "video_duration_seconds": 9.958333,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24/1",
+      "audio_codec": null,
+      "study_sheets": [
+        "study/reference-10s/dense-sheet.jpg",
+        "study/reference-10s/endpoints/contact-sheet.jpg",
+        "study/reference-10s/sheet-01.jpg"
+      ],
+      "endpoint_coverage": "study/reference-10s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-12s.mp4",
+      "sha256": "1aedc9a3d7ef0a064176451ccb4b0a11ae2e863b30d7efb03f41b687efabf691",
+      "bytes": 3346146,
+      "container_duration_seconds": 12.353016,
+      "video_duration_seconds": 12.294067,
+      "width": 1920,
+      "height": 1080,
+      "fps": "60/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-12s/dense-sheet.jpg",
+        "study/reference-12s/endpoints/contact-sheet.jpg",
+        "study/reference-12s/sheet-01.jpg"
+      ],
+      "endpoint_coverage": "study/reference-12s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-15s.mp4",
+      "sha256": "cfdd266c47da49bd3b42c84c2810f635198619461bf15f861bfc9e1a8ac039cf",
+      "bytes": 16090824,
+      "container_duration_seconds": 14.976,
+      "video_duration_seconds": 14.916667,
+      "width": 3840,
+      "height": 2160,
+      "fps": "24/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-15s/dense-sheet.jpg",
+        "study/reference-15s/endpoints/contact-sheet.jpg",
+        "study/reference-15s/sheet-01.jpg"
+      ],
+      "endpoint_coverage": "study/reference-15s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-1m.mp4",
+      "sha256": "3984da9769062d85252e105515ca49386323028bccf4d4b9876e5d0f8b59d43d",
+      "bytes": 23139670,
+      "container_duration_seconds": 66.153651,
+      "video_duration_seconds": 66.125,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-1m/dense-sheet.jpg",
+        "study/reference-1m/endpoints/contact-sheet.jpg",
+        "study/reference-1m/sheet-01.jpg",
+        "study/reference-1m/sheet-02.jpg",
+        "study/reference-1m/sheet-03.jpg",
+        "study/reference-1m/sheet-04.jpg"
+      ],
+      "endpoint_coverage": "study/reference-1m/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-37s.mp4",
+      "sha256": "7560760e2332850170321925e81a0df496a01d8ec92aaef459c078b4b1d95ff1",
+      "bytes": 14262914,
+      "container_duration_seconds": 37.184,
+      "video_duration_seconds": 37.125,
+      "width": 1920,
+      "height": 1080,
+      "fps": "24/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-37s/dense-sheet.jpg",
+        "study/reference-37s/endpoints/contact-sheet.jpg",
+        "study/reference-37s/sheet-01.jpg",
+        "study/reference-37s/sheet-02.jpg"
+      ],
+      "endpoint_coverage": "study/reference-37s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-45s.mp4",
+      "sha256": "8c40765e5c41c927607a4296a753521e9efd9c7efa1e3e2cedd52acb369443f9",
+      "bytes": 24590960,
+      "container_duration_seconds": 45.162812,
+      "video_duration_seconds": 45.0,
+      "width": 3840,
+      "height": 2160,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-45s/dense-sheet.jpg",
+        "study/reference-45s/endpoints/contact-sheet.jpg",
+        "study/reference-45s/sheet-01.jpg",
+        "study/reference-45s/sheet-02.jpg",
+        "study/reference-45s/sheet-03.jpg"
+      ],
+      "endpoint_coverage": "study/reference-45s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/reference-50s.mp4",
+      "sha256": "29e5caac912bad5f931df4fcff69792fe73a1ff924a40a15aa82ce4d4740e7c8",
+      "bytes": 10582003,
+      "container_duration_seconds": 49.856,
+      "video_duration_seconds": 49.8,
+      "width": 1920,
+      "height": 1080,
+      "fps": "60/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/reference-50s/dense-sheet.jpg",
+        "study/reference-50s/endpoints/contact-sheet.jpg",
+        "study/reference-50s/sheet-01.jpg",
+        "study/reference-50s/sheet-02.jpg",
+        "study/reference-50s/sheet-03.jpg"
+      ],
+      "endpoint_coverage": "study/reference-50s/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/use-storyboard.mp4",
+      "sha256": "c017f655e94b96426f337f0e2bfb1cfae4daee3785ca5ac3d95ab43e3b6ae208",
+      "bytes": 16568555,
+      "container_duration_seconds": 53.521995,
+      "video_duration_seconds": 53.466667,
+      "width": 1350,
+      "height": 1440,
+      "fps": "30/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/use-storyboard/dense-sheet.jpg",
+        "study/use-storyboard/endpoints/contact-sheet.jpg",
+        "study/use-storyboard/sheet-01.jpg",
+        "study/use-storyboard/sheet-02.jpg",
+        "study/use-storyboard/sheet-03.jpg"
+      ],
+      "endpoint_coverage": "study/use-storyboard/endpoints/coverage.json"
+    },
+    {
+      "file": "videos/use-this-formula.mp4",
+      "sha256": "af95d3c75896b5b8dab3c75446e123051c65cb978e9b83c7e07353fe7a552aa8",
+      "bytes": 6393283,
+      "container_duration_seconds": 68.565333,
+      "video_duration_seconds": 68.52,
+      "width": 1080,
+      "height": 778,
+      "fps": "25/1",
+      "audio_codec": "aac",
+      "study_sheets": [
+        "study/use-this-formula/dense-sheet.jpg",
+        "study/use-this-formula/endpoints/contact-sheet.jpg",
+        "study/use-this-formula/sheet-01.jpg",
+        "study/use-this-formula/sheet-02.jpg",
+        "study/use-this-formula/sheet-03.jpg",
+        "study/use-this-formula/sheet-04.jpg"
+      ],
+      "endpoint_coverage": "study/use-this-formula/endpoints/coverage.json",
+      "narration_study": "study/use-this-formula/narration.md"
+    },
+    {
+      "file": "videos/crowdreply-42s.mp4",
+      "sha256": "b552a5b442beec7decb36cd7e298d2aedf25ffb59f2fc1ed6d45bb36ecceeb59",
+      "bytes": 10809346,
+      "container_duration_seconds": 41.898667,
+      "video_duration_seconds": 41.84,
+      "width": 1920,
+      "height": 1080,
+      "fps": "25/1",
+      "audio_codec": "aac",
+      "original_path": "/Users/ohong/Downloads/Video 2096648879219617792.mp4",
+      "added": "2026-09-06",
+      "usage": "Private reference study, not cleared production footage",
+      "study_sheets": [
+        "study/crowdreply-42s/overview/contact-sheet.jpg",
+        "study/crowdreply-42s/opening/contact-sheet.jpg",
+        "study/crowdreply-42s/camera/contact-sheet.jpg",
+        "study/crowdreply-42s/payoff/contact-sheet.jpg"
+      ]
+    }
+  ],
+  "study_method": "study-method.md"
+}

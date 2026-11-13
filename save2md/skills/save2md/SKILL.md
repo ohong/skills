@@ -5,12 +5,12 @@ description: Save articles, X posts or threads, and YouTube transcripts as local
 
 # Save to Markdown
 
-Turn one URL into a durable local Markdown archive. Preserve the source URL, use the strongest available source, inspect the result, and return the absolute Markdown path.
+Save the requested content as one Markdown file with its title and source link. Inspect it and return the absolute path.
 
 ## Route by URL
 
 1. Normalize the URL and identify its host.
-2. Use exactly one source workflow:
+2. Read the relevant source guidance:
    - `youtube.com` or `youtu.be`: read [references/youtube.md](references/youtube.md).
    - `x.com` or `twitter.com`: read [references/x.md](references/x.md).
    - Any other web or archive URL: read [references/web-articles.md](references/web-articles.md).
@@ -22,7 +22,10 @@ Turn one URL into a durable local Markdown archive. Preserve the source URL, use
 
 - Do not invent text, metadata, authors, dates, media, or archive URLs.
 - Prefer structured text or rendered DOM extraction over OCR.
-- Preserve useful source metadata and local media when the source provides it.
+- Keep the output lean: title, source link, requested content, and useful author/date information when available. Do not include extraction logs or technical metadata.
+- Keep intermediate HTML, reader responses, manifests, and screenshots in temporary storage. Retain diagnostics only when requested; helpers support `--debug`.
+- Save local media only when it is part of the requested content. Do not create empty media folders.
+- When the user requests a section, extract only that section and remove repeated responsive-layout text.
 - Use the extracted title for the final Markdown filename. Preserve readable capitalization and punctuation where the filesystem permits; replace only unsafe filename characters. If no title can be extracted, use the URL-derived title.
-- For paywalled articles, try archive.today/archive.ph first, then a readable-text fallback or browser-saved HTML. Clearly label fallbacks.
+- For public pages, use the original page first. For paywalled articles, try archive.today/archive.ph, then a readable-text fallback or browser-saved HTML. Mention material fallbacks briefly in the reply.
 - Do not ask the user to choose an extraction method. Try the safe routes in order and report a blocker only after they fail.

@@ -296,6 +296,7 @@ def main() -> int:
         action="store_true",
         help="Write absolute local image paths in Markdown for renderers that do not resolve relative links",
     )
+    parser.add_argument("--debug", action="store_true", help="Keep a copy of the extraction manifest")
     args = parser.parse_args()
 
     if args.init_url:
@@ -319,9 +320,11 @@ def main() -> int:
     source_path = out_dir / "source.json"
     notes: list[str] = []
     markdown = render_markdown(data, media_dir, notes, args.absolute_media_links)
-    markdown_path = out_dir / (title_filename(data) if args.title_filename else "article.md")
+    if media_dir.exists() and not any(media_dir.iterdir()):
+        media_dir.rmdir()
+    markdown_path = out_dir / title_filename(data)
     markdown_path.write_text(markdown, encoding="utf-8")
-    if manifest_path != source_path:
+    if args.debug and manifest_path != source_path:
         write_json(source_path, data)
     print(markdown_path)
     return 0

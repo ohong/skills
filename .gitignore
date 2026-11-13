@@ -1,1 +1,13 @@
 .DS_Store
+
+__pycache__/
+*.pyc
+.venv/
+output/
+motion-video/references/videos/
+
+# Personal skills remain local and installed.
+/hobonichi/
+/imessage-access/
+/whisky-review/
+/catalog.local.json

@@ -10,7 +10,7 @@ Spec for every generated `ask-<person>` skill. Fill from research notes; write i
   "version": "0.1.0",
   "description": "Chat with a research-grounded model of <Person>'s taste for feedback and advice.",
   "author": { "name": "Oscar Hong" },
-  "repository": "https://github.com/ohong/agent-skills",
+  "repository": "https://github.com/ohong/skills",
   "license": "MIT"
 }
 ```

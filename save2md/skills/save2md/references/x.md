@@ -9,7 +9,7 @@ Final user-facing archives belong in the saved article library, not a repo scrat
 - Default library root: `~/Documents/Saved Articles/X/`
 - Default archive folder: title slug, for example `getting-started-with-loops/`
 - Markdown filename: matching title slug, for example `getting-started-with-loops.md`
-- Companion files: `source.json` and `media/`
+- Companion files: only media referenced by the Markdown, when needed.
 
 ## Output Contract
 
@@ -17,7 +17,7 @@ Given a single X URL, produce:
 
 - `<title-slug>.md`: clean Markdown with source metadata, article/post content, tweet embed blocks, local image links, and notes about any fallback screenshots.
 - `media/`: downloaded images, copied local screenshots, video thumbnails, and other media assets referenced by relative paths.
-- `source.json`: optional extraction manifest used to build the archive.
+- Extraction manifests stay in temporary storage. `--debug` optionally copies the manifest to the archive.
 
 Use `~/Documents/Saved Articles/X/` for user-facing deliverables. Use `outputs/` only for temporary scratch work when explicitly requested or when the user asks to keep the archive inside the current repo.
 
@@ -51,7 +51,7 @@ Use `~/Documents/Saved Articles/X/` for user-facing deliverables. Use `outputs/`
    - Capture screenshots of media, quoted posts, or article sections when downloads are blocked or when the visual layout matters.
 
 5. Build the archive.
-   - Create an extraction manifest and run `scripts/package_x_article.py` from this skill directory.
+   - Create an extraction manifest in temporary storage and run `scripts/package_x_article.py` from this skill directory.
    - Use title-slug folders and title-slug Markdown filenames for saved-article library entries; do not leave final deliverables named `article.md` or store them in opaque status-id folders.
    - For Codex app/local previews, write absolute media links so images render instead of placeholders.
    - Open or inspect the final Markdown and media folder before responding.
@@ -106,12 +106,12 @@ When `--out-dir` is omitted, the packager writes to `~/Documents/Saved Articles/
 
 Use `--out-dir /path/to/output-folder` only when the user asks for a specific destination. Use `--library-root /path/to/library` to change the saved-articles library root.
 
-To create a starter manifest:
+To create a starter manifest in a temporary working directory:
 
 ```bash
 python3 scripts/package_x_article.py \
   --init-url "https://x.com/handle/status/id" \
-  --library-root "~/Documents/Saved Articles/X"
+  --out-dir /path/to/temporary-work
 ```
 
 ## Quality Bar
