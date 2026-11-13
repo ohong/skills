@@ -8,23 +8,6 @@
   },
   "plugins": [
     {
-      "name": "capture-design",
-      "version": "0.1.0",
-      "description": "Capture an aesthetic or extract a design system from URLs and screenshots for reuse.",
-      "author": {
-        "name": "Oscar Hong"
-      },
-      "repository": "https://github.com/ohong/skills",
-      "license": "MIT",
-      "source": "./capture-design",
-      "keywords": [
-        "design",
-        "swipefile",
-        "references"
-      ],
-      "category": "design"
-    },
-    {
       "name": "distill-taste",
       "source": "./distill-taste",
       "description": "Distill a person's publicly shared taste into an ask-<person> advisor skill.",

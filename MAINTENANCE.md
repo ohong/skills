@@ -1,7 +1,7 @@
 # Source ownership
 
-- `ohong/skills`: reusable productivity, research, writing, creative, and agent-tool workflows.
-- `ohong/ostack`: reusable software engineering and software factory workflows.
+- `ohong/skills`: non-engineering workflows for life, general knowledge work, and productivity.
+- `ohong/ostack`: reusable software engineering and product development workflows.
 - Project repositories: skills bound to their application's behavior, data, or runtime.
 - Upstream installers and provider plugins: third-party skills, preserved with their original source and license.
 - Existing private skill stores: workflows already separated from public sources, including Amex claims and flight check-in.
@@ -61,3 +61,9 @@ artifacts, not active skills; entrypoints and generated skill bundles are remove
 Historical workflow documents in that directory do not establish current instructions.
 A separate local backup preserves removed entrypoints and the prior link map.
 No Git history rewrite, commit, push, or remote publication was performed.
+
+## Design capture migration — November 13, 2026
+
+Moved capture-design, including its current local edits, into `ohong/ostack`
+under `skills/capture-design`. Removed its catalog and marketplace entries here.
+Existing global skill links now resolve to the ostack source.

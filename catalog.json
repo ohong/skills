@@ -8,12 +8,6 @@
       "installation": "symlink"
     },
     {
-      "name": "capture-design",
-      "path": "capture-design/skills/capture-design",
-      "description": "Save reference visuals as a reusable design-system swipefile. Use for capturing an aesthetic, extracting a design system from a URL or screenshots, or a requested design teardown for reuse.",
-      "installation": "symlink"
-    },
-    {
       "name": "daily-close",
       "path": "daily-close",
       "description": "Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. Use for \"$daily-close\", \"close my day\", or a requested daily work recap.",

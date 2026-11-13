@@ -1,7 +1,7 @@
 # skills
 
-My reusable skills for productivity, research, writing, creative work, and agent tools.
-Software engineering and software factory workflows live in [ohong/ostack](https://github.com/ohong/ostack).
+My reusable non-engineering skills for life, general knowledge work, and productivity.
+Software engineering and product development workflows live in [ohong/ostack](https://github.com/ohong/ostack).
 Project-specific skills stay with their projects. Installed upstream skills remain maintained by their original authors.
 
 ## Install
@@ -45,7 +45,6 @@ Retired support files are preserved under `resources/retired/`; they are exclude
 | Skill | Purpose |
 |---|---|
 | [ask-lulu](ask-lulu/skills/ask-lulu/) | Chat with a research-grounded model of Lulu Cheng Meservey for candid communications advice or work review. |
-| [capture-design](capture-design/skills/capture-design/) | Save reference visuals as a reusable design-system swipefile. |
 | [daily-close](daily-close/) | Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. |
 | [demo-video](demo-video/) | Create a narrated MP4 demo from browser screenshots, low-cost fal.ai text-to-speech, and ffmpeg. |
 | [distill-taste](distill-taste/skills/distill-taste/) | Deep-research a named person's (or group of people's) public writing, interviews, and talks, then distill their taste into a standalone installable ask-person advisor skill. |
