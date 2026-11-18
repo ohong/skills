@@ -92,6 +92,12 @@
       "installation": "symlink"
     },
     {
+      "name": "sense-of-style",
+      "path": "sense-of-style",
+      "description": "Revise rough prose or turn notes into a finished draft using Steven Pinker’s The Sense of Style. Use for edits to clarity, coherence, and voice, or when the user asks for a Pinker-informed revision.",
+      "installation": "symlink"
+    },
+    {
       "name": "spring-cleaning",
       "path": "spring-cleaning",
       "description": "Inspect Mac disk use, identify recoverable space, and carry out scoped cleanup with verification. Use for low-storage or disk-cleanup requests; keep requests for plans or explanations read-only.",
@@ -107,6 +113,12 @@
       "name": "video-analysis",
       "path": "video-analysis",
       "description": "Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. Use when the user supplies a video file or asks you to inspect one on your computer.",
+      "installation": "symlink"
+    },
+    {
+      "name": "writing-clearly-and-concisely",
+      "path": "writing-clearly-and-concisely",
+      "description": "Draft, revise, or review any piece of writing when the goal is clear, concise technical prose. Use for word choice, sentence structure, and flow across sentences.",
       "installation": "symlink"
     },
     {

@@ -59,7 +59,9 @@ Retired support files are preserved under `resources/retired/`; they are exclude
 | [quarterly-derisk-exercise](quarterly-derisk-exercise/) | Ask Oscar the "5 questions to de-risk life" exercise, once a quarter. |
 | [save2md](save2md/skills/save2md/) | Save articles, X posts or threads, and YouTube transcripts as local Markdown with bundled tools. |
 | [search-x](search-x/skills/search-x/) | Find a specific remembered X post from fuzzy clues and verify it on the live post. |
+| [sense-of-style](sense-of-style/) | Turn notes or rough prose into clear, vivid writing using the principles in Steven Pinker’s *The Sense of Style*. |
 | [spring-cleaning](spring-cleaning/) | Inspect Mac disk use, identify recoverable space, and carry out scoped cleanup with verification. |
 | [transcribe-youtube](transcribe-youtube/) | Transcribe a YouTube video through usetranscribe.io and save timestamped Markdown. |
 | [video-analysis](video-analysis/) | Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. |
+| [writing-clearly-and-concisely](writing-clearly-and-concisely/) | Draft, revise, or review prose for clarity, precision, and concision. |
 | [writing-with-smart-brevity](writing-with-smart-brevity/) | Rewrites long-winded, padded or AI-sounding text into Smart Brevity style (Axios / VandeHei, Allen & Schwartz) - main point first, why it matters, ranked support, clear next step - without losing facts, caveats or warmth. |
