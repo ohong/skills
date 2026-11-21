@@ -1,68 +1,63 @@
-# skills
+# Skills
 
-My reusable non-engineering skills for life, general knowledge work, and productivity.
-Software engineering and product development workflows live in [ohong/ostack](https://github.com/ohong/ostack).
-Project-specific skills stay with their projects. Installed upstream skills remain maintained by their original authors.
+I keep these skills for work I do more than once, from finding a half-remembered X post to turning a voice memo into a draft. Each skill has a `SKILL.md` you can read before installing it. My software engineering skills live in [ostack](https://github.com/ohong/ostack).
+
+## Writing
+
+| Skill | When to use it |
+|---|---|
+| [draft-zero](draft-zero/) | Talk through an essay idea and come away with an outline in your own words. |
+| [sense-of-style](sense-of-style/) | Shape rough notes into a piece a reader can follow, using Steven Pinker’s *The Sense of Style*. |
+| [writing-clearly-and-concisely](writing-clearly-and-concisely/) | Make technical prose easier to follow, sentence by sentence. |
+| [writing-with-smart-brevity](writing-with-smart-brevity/) | Lead with the news, explain why it matters, and keep the caveats that change the story. |
+| [no-ai-slop](no-ai-slop/) | Spot stock phrases in a draft or edit them out while keeping the writer’s voice. |
+| [writing-for-agents](writing-for-agents/) | Write instructions an agent can follow and check. I adapted and extended [Matt Pocock’s skill](https://github.com/mattpocock/skills/tree/abeeaf95660ba9e8b7c753eb38f441ca707a8823/skills/productivity/writing-for-agents) for my own use. |
+
+## Research and creative work
+
+| Skill | When to use it |
+|---|---|
+| [save2md](save2md/skills/save2md/) | Keep a local Markdown copy of an article, X thread, or YouTube transcript. |
+| [search-x](search-x/skills/search-x/) | Find a post from the few details you remember and verify it on X. |
+| [distill-taste](distill-taste/skills/distill-taste/) | Study someone’s public work and turn their recurring judgments into an advisor skill. |
+| [name-it](name-it/skills/name-it/) | Develop names for a product or brand and check the candidates. |
+| [transcribe-youtube](transcribe-youtube/) | Save a timestamped transcript of a YouTube video. |
+| [video-analysis](video-analysis/) | Ask questions about a local video or get a timestamped summary and critique. |
+| [demo-video](demo-video/) | Make a narrated product demo from browser screenshots. |
+| [motion-video](motion-video/) | Take a film from script and shot plan through narration, captions, and final edit. |
+
+## Everyday work
+
+| Skill | When to use it |
+|---|---|
+| [post-walk](post-walk/skills/post-walk/) | Turn an Apple Voice Memo into a transcript, project notes, tasks, and drafts. |
+| [quarterly-derisk-exercise](quarterly-derisk-exercise/) | Work through five questions about what could go wrong and what you can do now. |
+| [fast-wifi](fast-wifi/skills/fast-wifi/) | Measure a slow Mac network connection and narrow down the cause. |
+| [spring-cleaning](spring-cleaning/) | Find what takes up space on a Mac, clean up the items you choose, and measure what you recovered. |
 
 ## Install
 
-Clone this repo to `~/dev/skills`, then link its standalone skills into the global agent directories:
+Clone the repository and preview the links the installer will create.
 
 ```sh
+git clone https://github.com/ohong/skills.git
+cd skills
 python3 scripts/link-skills.py --dry-run
-python3 scripts/link-skills.py
 ```
 
-The installer links `~/.agents/skills` and `~/.claude/skills` to these sources. Codex discovers the shared `.agents` directory.
-Existing installations are preserved; conflicts stop before any links are created.
-Use `--agents codex` if you need the older Codex-specific directory.
+Run `python3 scripts/link-skills.py` to install. Codex reads the links in `~/.agents/skills`. Claude Code reads them in `~/.claude/skills`. The installer stops if a destination conflicts with an existing skill. Keep the checkout in place; the links point back to it.
 
-Link selected skills into a project:
+To install only selected skills in one project, run this command from the checkout.
 
 ```sh
 python3 scripts/link-skills.py --target ~/dev/my-project --only save2md,search-x
 ```
 
-The project stores symlinks, not copies. Update the canonical source here.
-A local symlink requires this checkout on that machine; it is not a portable vendored installation.
-
-For Claude marketplace plugins:
+For skills packaged as Claude plugins, you can use the marketplace instead.
 
 ```text
 /plugin marketplace add ohong/skills
 /plugin install save2md@ohong-skills
 ```
 
-Restart the agent or start a fresh chat after changing installations.
-See [MAINTENANCE.md](MAINTENANCE.md) for source ownership and migration details.
-
-Personal skills stay local and ignored. Reinstall them with `python3 scripts/link-skills.py --include-local`.
-
-Retired support files are preserved under `resources/retired/`; they are excluded from skill discovery.
-
-## Skills
-
-| Skill | Purpose |
-|---|---|
-| [ask-lulu](ask-lulu/skills/ask-lulu/) | Chat with a research-grounded model of Lulu Cheng Meservey for candid communications advice or work review. |
-| [daily-close](daily-close/) | Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. |
-| [demo-video](demo-video/) | Create a narrated MP4 demo from browser screenshots, low-cost fal.ai text-to-speech, and ffmpeg. |
-| [distill-taste](distill-taste/skills/distill-taste/) | Deep-research a named person's (or group of people's) public writing, interviews, and talks, then distill their taste into a standalone installable ask-person advisor skill. |
-| [draft-zero](draft-zero/) | Interview the writer and turn an essay idea into a rough outline with their own words. |
-| [fast-wifi](fast-wifi/skills/fast-wifi/) | Diagnose a slow macOS network with the bundled measurement script. |
-| [fieldtheory-research](fieldtheory-research/skills/fieldtheory-research/) | Search, sync, export, and analyze the user's local X bookmarks with the Field Theory CLI while preserving full post text and provenance. |
-| [karasz-cover](karasz-cover/) | Create artistic illustrated covers for projects or ideas with imagegen, using the supplied Ilonka Karasz cover references. |
-| [motion-video](motion-video/) | Direct and produce finished videos end to end - product films from a deployed URL or codebase, narrated explainers, and generated or motion-graphics pieces - with a written script, emotive TTS narration, generated keyframes and shots, real Creative Commons footage, music, word-timed captions, and a critic pass. |
-| [name-it](name-it/skills/name-it/) | Run a structured brand or product naming and validation process. |
-| [no-ai-slop](no-ai-slop/) | Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. |
-| [post-walk](post-walk/skills/post-walk/) | Process a local Apple Voice Memo into an archived transcript, project notes, tasks, todos, and drafts. |
-| [quarterly-derisk-exercise](quarterly-derisk-exercise/) | Ask Oscar the "5 questions to de-risk life" exercise, once a quarter. |
-| [save2md](save2md/skills/save2md/) | Save articles, X posts or threads, and YouTube transcripts as local Markdown with bundled tools. |
-| [search-x](search-x/skills/search-x/) | Find a specific remembered X post from fuzzy clues and verify it on the live post. |
-| [sense-of-style](sense-of-style/) | Turn notes or rough prose into clear, vivid writing using the principles in Steven Pinker’s *The Sense of Style*. |
-| [spring-cleaning](spring-cleaning/) | Inspect Mac disk use, identify recoverable space, and carry out scoped cleanup with verification. |
-| [transcribe-youtube](transcribe-youtube/) | Transcribe a YouTube video through usetranscribe.io and save timestamped Markdown. |
-| [video-analysis](video-analysis/) | Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. |
-| [writing-clearly-and-concisely](writing-clearly-and-concisely/) | Draft, revise, or review prose for clarity, precision, and concision. |
-| [writing-for-agents](writing-for-agents/) | Write and review instructions agents follow. Adapted and extended for my own use from [Matt Pocock’s skill](https://github.com/mattpocock/skills/tree/abeeaf95660ba9e8b7c753eb38f441ca707a8823/skills/productivity/writing-for-agents). |
-| [writing-with-smart-brevity](writing-with-smart-brevity/) | Rewrites long-winded, padded or AI-sounding text into Smart Brevity style (Axios / VandeHei, Allen & Schwartz) - main point first, why it matters, ranked support, clear next step - without losing facts, caveats or warmth. |
+Start a fresh agent session to pick up the installation. For the older Codex-specific directory, use `--agents codex`. If you maintain a local catalog for skills under the Git-ignored `private/` directory, use `--include-local`. See [maintenance notes](MAINTENANCE.md) for the repository’s history.

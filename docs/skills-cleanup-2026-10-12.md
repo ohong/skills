@@ -13,7 +13,6 @@ Three additional personal skills remain local, ignored, and installed.
 - Kept transcribe-youtube as a thin adapter to save2md's single service guide and helper.
 - Replaced delegate's model pins and stale companion assumptions with explicit authorization, worker ownership, and integrated verification.
 - Moved press-release-faq, switch-model, take-notes, and win-seo into ostack with their complete support files.
-- Kept hobonichi, imessage-access, and whisky-review on disk and installed, but removed them from the public catalog and Git tracking. Their directories and catalog.local.json are ignored.
 - Updated both README catalogs, maintenance records, marketplace registrations, installers, dependent skills, and installed consumers.
 
 The explicit retirement set includes git-commit-helper, skill-evolver, hatch-pet,

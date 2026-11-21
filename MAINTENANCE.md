@@ -18,12 +18,12 @@ Moved the clean, unused Anthropic clone to Trash at the user's request.
 Moved 18 engineering packages into `ostack/skills`; their earlier Git history remains in this repository.
 Preserved existing uncommitted save2md edits separately from the migration.
 
-Imported local reusable sources for daily-close, demo-video, motion-video, no-ai-slop, research-location,
+Imported local reusable sources for demo-video, motion-video, no-ai-slop, research-location,
 hatch-pet, win-seo, design-system-extractor, writing-with-smart-brevity, codex-skill-autoresearch, and skill-evolver.
-Also centralized video-analysis, imessage-access, claude-power-user-digest, and quarterly-derisk-exercise from Documents and projects.
+Also centralized video-analysis, claude-power-user-digest, and quarterly-derisk-exercise from Documents and projects.
 The digest source omits its hardwired personal contact address; the original is preserved locally.
 
-Imported personal cloud-authored draft-zero, hobonichi, whisky-review, and extracting-design-systems.
+Imported personal cloud-authored draft-zero and extracting-design-systems.
 Consolidated the dotfiles communication family; engineering-specific members moved to ostack.
 These imports preserve existing instructions and supporting resources. Their origin is the existing local installation;
 absence from an installer lock is not proof of original authorship. Preserve embedded licenses and attribution.
@@ -53,7 +53,6 @@ The earlier migration and audit sections describe historical states.
 - Removed duplicate skill-authoring discovery in favor of built-in skill-creator and installed writing-for-agents.
 - Kept transcribe-youtube as a thin explicit adapter; save2md owns its helper and service procedure.
 - Moved press-release-faq, switch-model, take-notes, and win-seo into ostack with all scripts, tests, and references.
-- Removed personal hobonichi, imessage-access, and whisky-review from the public catalog. Their local files and installations remain; ohong/skills ignores them and catalog.local.json.
 
 Useful retired scripts, tests, references, templates, and licenses remain under
 `resources/retired/<name>/` in the owning repository. These are retained support

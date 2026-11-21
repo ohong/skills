@@ -43,24 +43,6 @@
       "category": "utilities"
     },
     {
-      "name": "fieldtheory-research",
-      "source": "./fieldtheory-research",
-      "description": "Search, export, and analyze local X bookmarks with preserved provenance.",
-      "version": "0.1.0",
-      "author": {
-        "name": "Oscar Hong"
-      },
-      "repository": "https://github.com/ohong/skills",
-      "license": "MIT",
-      "keywords": [
-        "x",
-        "bookmarks",
-        "research",
-        "fieldtheory"
-      ],
-      "category": "productivity"
-    },
-    {
       "name": "name-it",
       "source": "./name-it",
       "description": "Run a structured brand or product naming and validation process.",

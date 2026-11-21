@@ -1,4 +1,0 @@
-interface:
-  display_name: "Karasz Cover"
-  short_description: "Artistic project covers inspired by Ilonka Karasz"
-  default_prompt: "Use $karasz-cover to create an artistic cover for this project or idea."

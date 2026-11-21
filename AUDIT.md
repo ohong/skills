@@ -226,12 +226,11 @@ The audit phase ends here. No skill implementation, deletion, description rewrit
 
 **Result:** 24 files in tracked skills changed, with a net reduction of 220 lines (+202/−422). The edits remove capitalized pressure words, role-identity lines, rules restated across sections, the Boyd/OODA narration in `mission`, and dated narratives in `switch-model`. Every confirmation gate, destructive-command safeguard, output template, exact command, and quality bar stays. The duplicated milestone loop in `mission:start` now points to `references/execution-protocol.md`.
 
-**Unchanged:** `spring-cleaning` and `ask-lulu` are already dense, so they stay as they are. The untracked folders (`architect`, `benchmark-checklist`, `correct`, `explainer-video`, `figure-it-out`, `how`, `interrogate`, `pls-fix`, `poteto-mode`, `recall`, `show-me-your-work`, `swarm`) already use the target style and are uncommitted work, so the audit doesn't edit them. `save2md` has separate uncommitted edits and is also excluded.
+**Unchanged:** `spring-cleaning` is already dense. The untracked folders (`architect`, `benchmark-checklist`, `correct`, `explainer-video`, `figure-it-out`, `how`, `interrogate`, `pls-fix`, `poteto-mode`, `recall`, `show-me-your-work`, `swarm`) already use the target style and are uncommitted work, so the audit doesn't edit them. `save2md` has separate uncommitted edits and is also excluded.
 
 **Report-only findings:**
 
 - `repo-now/skills/repo-now/SKILL.md:3` routes to `explain` and `audit-and-improve`. `explain` is a standalone folder, so that redirect works only where the skill is installed.
 - `sync-well/skills/sync-well/SKILL.md:3` says "the merge-conflict workflow", but the installed skill is named `merge-conflict-resolver`.
 - `switch-model/SKILL.md` depends on the machine-local `codex-switch-model` alias.
-- `fieldtheory-research` pins `/opt/homebrew/bin/ft` and v1.3.19.
 - `how/SKILL.md:143`, `recall/SKILL.md:23`, and `poteto-mode/SKILL.md:61` keep guards from the Cursor port: Cursor agent APIs, the Cursor transcript path, and the upstream `/loop`. They are harmless, but they add no value outside Cursor.

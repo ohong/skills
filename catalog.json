@@ -2,18 +2,6 @@
   "repository": "ohong/skills",
   "skills": [
     {
-      "name": "ask-lulu",
-      "path": "ask-lulu/skills/ask-lulu",
-      "description": "Chat with a research-grounded model of Lulu Cheng Meservey for candid communications advice or work review. Use for \"/ask-lulu\", \"what would Lulu think of...\", \"run this through Lulu\", \"Lulu's take on...\", or requests to review a memo, founder communication, company narrative, project manifesto, or announcement through her perspective.",
-      "installation": "symlink"
-    },
-    {
-      "name": "daily-close",
-      "path": "daily-close",
-      "description": "Reconstruct Oscar's day into a concise, evidence-backed local daily log draft and at most three decisions. Use for \"$daily-close\", \"close my day\", or a requested daily work recap.",
-      "installation": "symlink"
-    },
-    {
       "name": "demo-video",
       "path": "demo-video",
       "description": "Create a narrated MP4 demo from browser screenshots, low-cost fal.ai text-to-speech, and ffmpeg. Use for still-image product walkthroughs synchronized to narration.",
@@ -28,25 +16,13 @@
     {
       "name": "draft-zero",
       "path": "draft-zero",
-      "description": "Kick off a writing session for a new essay by interviewing Oscar in structured question rounds until there's enough material for a rough outline \u2014 including verbatim sentences worth keeping for the first draft. Use whenever Oscar starts a writing session, says \"/draft-zero\", \"let's write\", \"pick a topic\", \"help me start an essay\", mentions writer's block or a blank page, or names an essay idea he wants to develop. The whole point is to beat blank-page paralysis: end every session with something on the page.",
+      "description": "Kick off a writing session for a new essay by interviewing Oscar in structured question rounds until there's enough material for a rough outline — including verbatim sentences worth keeping for the first draft. Use whenever Oscar starts a writing session, says \"/draft-zero\", \"let's write\", \"pick a topic\", \"help me start an essay\", mentions writer's block or a blank page, or names an essay idea he wants to develop. The whole point is to beat blank-page paralysis: end every session with something on the page.",
       "installation": "symlink"
     },
     {
       "name": "fast-wifi",
       "path": "fast-wifi/skills/fast-wifi",
       "description": "Diagnose a slow macOS network with the bundled measurement script. Use when the user asks to troubleshoot current Wi-Fi or internet performance.",
-      "installation": "symlink"
-    },
-    {
-      "name": "fieldtheory-research",
-      "path": "fieldtheory-research/skills/fieldtheory-research",
-      "description": "Search, sync, export, and analyze the user's local X bookmarks with the Field Theory CLI while preserving full post text and provenance. Use when the user mentions Field Theory, `ft`, X bookmarks, bookmark folders, remembered saved posts, chronological bookmark exports, or bookmark-grounded research. Do not use for live X search or archiving a single known URL.",
-      "installation": "symlink"
-    },
-    {
-      "name": "karasz-cover",
-      "path": "karasz-cover",
-      "description": "Create artistic illustrated covers for projects or ideas with imagegen, using the supplied Ilonka Karasz cover references. Use for /karasz-cover or requests for this decorative editorial style; ordinary image generation does not need this skill.",
       "installation": "symlink"
     },
     {
@@ -94,7 +70,7 @@
     {
       "name": "sense-of-style",
       "path": "sense-of-style",
-      "description": "Revise rough prose or turn notes into a finished draft using Steven Pinker\u2019s The Sense of Style. Use for edits to clarity, coherence, and voice, or when the user asks for a Pinker-informed revision.",
+      "description": "Revise rough prose or turn notes into a finished draft using Steven Pinker’s The Sense of Style. Use for edits to clarity, coherence, and voice, or when the user asks for a Pinker-informed revision.",
       "installation": "symlink"
     },
     {

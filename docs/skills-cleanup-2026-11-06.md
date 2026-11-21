@@ -14,7 +14,6 @@ Corrected catalog.json and the README row from the actual skill metadata.
 - Explain contains both change and runtime guides. The completed pls-fix/reforge merge remains intact.
 - The four requested moves remain in ostack with working consumers.
 - Both design extractors are consolidated into capture-design; transcribe-youtube uses save2md's helper and service guide.
-- Hobonichi, imessage-access, and whisky-review remain installed locally, ignored by Git, and absent from tracked files.
 - The 73 retired support files checked against the October backup remain byte-for-byte intact.
 
 ## Checks run

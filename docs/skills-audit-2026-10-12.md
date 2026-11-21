@@ -76,7 +76,6 @@ Do not fabricate cost or accuracy gains, treat repeated model self-review as ind
 
 | Skill | Purpose | Origin | Triage |
 |---|---|---|---|
-| [ask-lulu](../ask-lulu/skills/ask-lulu/SKILL.md) | Apply Lulu Cheng Meservey's sourced communications principles to a draft or decision. | Local source; original authorship unverified | Keep |
 | [capture-design](../capture-design/skills/capture-design/SKILL.md) | Save a visual reference as a reusable design system and asset manifest. | Local source; original authorship unverified | Keep |
 | [caveman](../caveman/SKILL.md) | Use a deliberately terse response style, including classical Chinese modes. | [Copied/adapted: JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | Thin |
 | [caveman-compress](../caveman-compress/SKILL.md) | Compress prose files while preserving code, values, and recoverable originals. | [Copied/adapted: JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | Keep |
@@ -85,17 +84,13 @@ Do not fabricate cost or accuracy gains, treat repeated model self-review as ind
 | [claude-power-user-digest](../claude-power-user-digest/SKILL.md) | Map recent Claude product changes to recurring personal workflows. | Local source; original authorship unverified | Repair |
 | [codex-skill-autoresearch](../codex-skill-autoresearch/SKILL.md) | Extract redacted session evidence and rank opportunities for new skills. | Local source; original authorship unverified | Keep |
 | [create-mascot](../create-mascot/skills/create-mascot/SKILL.md) | Design a mascot and build it as an editable Blender asset. | Local source; original authorship unverified | Keep |
-| [daily-close](../daily-close/SKILL.md) | Reconstruct a day's completed work and draft a daily log. | Local source; original authorship unverified | Thin |
 | [demo-video](../demo-video/SKILL.md) | Turn real product screenshots and narration into a simple MP4. | [Adapted: dctanner demo-video gist](https://gist.github.com/dctanner/ee7fe7997bba0efbca49b8c0bdc1936a) | Keep |
 | [design-system-extractor](../design-system-extractor/SKILL.md) | Extract colors, typography, layout, and interactions from visual references. | Local source; original authorship unverified | Merge |
 | [distill-taste](../distill-taste/skills/distill-taste/SKILL.md) | Research public work and create a sourced persona advisor skill. | Local source; original authorship unverified | Keep |
 | [draft-zero](../draft-zero/SKILL.md) | Interview the writer and turn their ideas into an essay outline. | Local source; original authorship unverified | Keep |
 | [extracting-design-systems](../extracting-design-systems/SKILL.md) | Reverse engineer a web application's visual design system. | Local source; original authorship unverified | Merge |
 | [fast-wifi](../fast-wifi/skills/fast-wifi/SKILL.md) | Measure a Mac's network bottleneck and verify scoped fixes. | Local source; original authorship unverified | Thin |
-| [fieldtheory-research](../fieldtheory-research/skills/fieldtheory-research/SKILL.md) | Search and export local X bookmarks with preserved provenance. | Local source; original authorship unverified | Keep |
 | [hatch-pet](../hatch-pet/SKILL.md) | Generate, assemble, validate, and package animated Codex pet atlases. | Local source; original authorship unverified | Rework |
-| [hobonichi](../hobonichi/SKILL.md) | Find sourced memorable moments for a five-year journal. | Local source; original authorship unverified | Keep |
-| [imessage-access](../imessage-access/SKILL.md) | Read local Messages threads and locate attachments without sending replies. | Local source; original authorship unverified | Keep |
 | [motion-video](../motion-video/SKILL.md) | Produce scripted, narrated films with shot generation and final media checks. | Local source; original authorship unverified | Thin |
 | [name-it](../name-it/skills/name-it/SKILL.md) | Develop and validate brand names through a structured naming method. | Local synthesis of naming references | Thin |
 | [no-ai-slop](../no-ai-slop/SKILL.md) | Edit AI-sounding prose while preserving the author's voice and claims. | [Copied/adapted: Peter Yang](https://github.com/petergyang/no-ai-slop) | Keep |
@@ -113,6 +108,5 @@ Do not fabricate cost or accuracy gains, treat repeated model self-review as ind
 | [take-notes](../take-notes/SKILL.md) | Save new conversation learnings and complete reusable prompts. | Local source; original authorship unverified | Keep |
 | [transcribe-youtube](../transcribe-youtube/SKILL.md) | Transcribe YouTube through the existing service and save timestamped Markdown. | Local source; original authorship unverified | Merge |
 | [video-analysis](../video-analysis/SKILL.md) | Analyze actual local video and audio with timestamped Gemini evidence. | Local source; original authorship unverified | Keep |
-| [whisky-review](../whisky-review/SKILL.md) | Turn tasting notes into a sourced review in the user's voice. | Local source; original authorship unverified | Keep |
 | [win-seo](../win-seo/SKILL.md) | Improve search performance using persistent evidence and measured follow-up. | Local source; original authorship unverified | Keep |
 | [writing-with-smart-brevity](../writing-with-smart-brevity/SKILL.md) | Reorder and tighten prose around the reader's most important point. | Local source; original authorship unverified | Keep |
