@@ -64,4 +64,5 @@ Retired support files are preserved under `resources/retired/`; they are exclude
 | [transcribe-youtube](transcribe-youtube/) | Transcribe a YouTube video through usetranscribe.io and save timestamped Markdown. |
 | [video-analysis](video-analysis/) | Analyze local videos with the Gemini API for timestamped summaries, spoken content, visual explanations, critique, and finding specific moments. |
 | [writing-clearly-and-concisely](writing-clearly-and-concisely/) | Draft, revise, or review prose for clarity, precision, and concision. |
+| [writing-for-agents](writing-for-agents/) | Write and review instructions agents follow. Adapted and extended for my own use from [Matt Pocock’s skill](https://github.com/mattpocock/skills/tree/abeeaf95660ba9e8b7c753eb38f441ca707a8823/skills/productivity/writing-for-agents). |
 | [writing-with-smart-brevity](writing-with-smart-brevity/) | Rewrites long-winded, padded or AI-sounding text into Smart Brevity style (Axios / VandeHei, Allen & Schwartz) - main point first, why it matters, ranked support, clear next step - without losing facts, caveats or warmth. |

@@ -94,7 +94,7 @@
     {
       "name": "sense-of-style",
       "path": "sense-of-style",
-      "description": "Revise rough prose or turn notes into a finished draft using Steven Pinker’s The Sense of Style. Use for edits to clarity, coherence, and voice, or when the user asks for a Pinker-informed revision.",
+      "description": "Revise rough prose or turn notes into a finished draft using Steven Pinker\u2019s The Sense of Style. Use for edits to clarity, coherence, and voice, or when the user asks for a Pinker-informed revision.",
       "installation": "symlink"
     },
     {
@@ -119,6 +119,12 @@
       "name": "writing-clearly-and-concisely",
       "path": "writing-clearly-and-concisely",
       "description": "Draft, revise, or review any piece of writing when the goal is clear, concise technical prose. Use for word choice, sentence structure, and flow across sentences.",
+      "installation": "symlink"
+    },
+    {
+      "name": "writing-for-agents",
+      "path": "writing-for-agents",
+      "description": "Writes and reviews instructions that agents follow. Use when drafting or revising a skill, AGENTS.md, CLAUDE.md, or a runbook for an agent.",
       "installation": "symlink"
     },
     {
